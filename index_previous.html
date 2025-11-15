@@ -17,6 +17,806 @@
     <link rel="stylesheet" href="styles-new.css">
     <link rel="icon" href="webconnectlogo.png" type="image/png">
 </head>
+    <style>
+    <!-- Navigation -->
+
+        .nav-brand-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-dark);
+            color: white;
+            padding: 8rem 0 6rem;
+            margin-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(0, 204, 255, 0.1);
+            border: 1px solid rgba(0, 204, 255, 0.3);
+            color: var(--accent-cyan);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, white, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gradient-accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(0, 102, 204, 0.1);
+            color: var(--primary-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark-slate);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-blue);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-slate);
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--gray-600);
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .portfolio-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .portfolio-category {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .category-header {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 780px;
+        }
+
+        .category-pill {
+            align-self: flex-start;
+            background: rgba(0, 102, 204, 0.1);
+            color: var(--primary-blue);
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-slate);
+        }
+
+        .category-description {
+            font-size: 1.05rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 2.25rem;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        .card-header {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .card-top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .project-type {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+        }
+
+        .status-live {
+            background: rgba(5, 150, 105, 0.12);
+            color: #0f766e;
+        }
+
+        .status-demo {
+            background: rgba(59, 130, 246, 0.15);
+            color: #1d4ed8;
+        }
+
+        .status-phase {
+            background: rgba(245, 158, 11, 0.18);
+            color: #b45309;
+        }
+
+        .status-enterprise {
+            background: rgba(236, 72, 153, 0.18);
+            color: #be185d;
+        }
+
+        .meta-note {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray-600);
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--dark-slate);
+        }
+
+        .card-subtitle {
+            font-size: 1.05rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        .card-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .card-section h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--dark-slate);
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .detail-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .detail-group h5 {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--gray-600);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .simple-list,
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 0.6rem;
+        }
+
+        .simple-list li {
+            position: relative;
+            padding-left: 1.1rem;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .simple-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .check-icon {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .comparison-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .comparison-list li {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .comparison-list li strong {
+            color: var(--dark-slate);
+        }
+
+        .comparison-highlight {
+            margin-top: 0.5rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--gray-200);
+            color: #0f766e;
+            font-weight: 700;
+        }
+
+        .card-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 999px;
+            background: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .card-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .card-note {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* Work Order Section */
+        .work-order {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 6rem 0;
+        }
+
+        .work-order .container {
+            max-width: 1100px;
+        }
+
+        .work-order-wrapper {
+            display: grid;
+            gap: 2.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        .work-order-header {
+            max-width: 540px;
+        }
+
+        .work-order-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .work-order-description {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .work-order-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+        }
+
+        .required {
+            color: #ffd23f;
+            margin-left: 0.25rem;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            padding: 0.9rem 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            font-size: 1rem;
+            transition: border var(--transition), background var(--transition);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: rgba(255, 210, 63, 0.9);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .form-textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .helper-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .consent-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .consent-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #ffd23f;
+            margin-top: 0.2rem;
+        }
+
+        .consent-group label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .work-order-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 2rem;
+            border-radius: 999px;
+            background: white;
+            color: var(--dark-slate);
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .work-order-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-slate);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-text {
+            opacity: 0.8;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .text-logo-tech {
+                font-size: 1.2rem;
+            }
+
+            .logo-360-tech {
+                font-size: 1rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .portfolio {
+                padding: 4rem 0;
+            }
+
+            .category-title {
+                font-size: 1.5rem;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-card {
+                padding: 1.75rem;
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+            }
+
+            .card-link {
+                width: 100%;
+            }
+
+            .work-order-wrapper {
+                padding: 2rem;
+            }
+
+            .work-order-title {
+                font-size: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: span 1;
+            }
+
+            .form-actions {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    </style>
+</head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -421,8 +1221,12 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="card-actions">
-                                <a href="https://studyconnect1.netlify.app/" class="card-link" target="_blank" rel="noopener">Live Demo</a>
+                            <div class="card-actions" style="display: flex; flex-direction: column; gap: 1rem;">
+                                <button onclick="requestDemo('StudyConnect', 'StudyConnect - Clinical Research Pre-Screening Platform')" style="background: #3b82f6; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">📧 Request Demo Access</button>
+                                <div style="padding: 1rem; background: #f3f4f6; border-radius: 6px; text-align: center;">
+                                    <p style="margin: 0; font-size: 0.875rem; color: #6b7280; font-weight: 600;">💼 Available for Purchase or Lease</p>
+                                    <p style="margin: 0.25rem 0 0 0; font-size: 0.75rem; color: #9ca3af;">Contact for custom pricing</p>
+                                </div>
                             </div>
                             <p class="card-note">
                                 For full HIPAA-compliant medical screening with secure data handling, pricing ranges from $15,000 to $25,000. This release focuses on pre-screening only.
@@ -500,8 +1304,12 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="card-actions">
-                                <a href="https://studyconnectpro.netlify.app/?ref=webconnect360" class="card-link" target="_blank" rel="noopener">Live Demo</a>
+                            <div class="card-actions" style="display: flex; flex-direction: column; gap: 1rem;">
+                                <button onclick="requestDemo('StudyConnectPro', 'StudyConnectPRO - Enterprise HIPAA-Compliant Research Platform')" style="background: #3b82f6; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">📧 Request Demo Access</button>
+                                <div style="padding: 1rem; background: #f3f4f6; border-radius: 6px; text-align: center;">
+                                    <p style="margin: 0; font-size: 0.875rem; color: #6b7280; font-weight: 600;">💼 Available for Purchase or Lease</p>
+                                    <p style="margin: 0.25rem 0 0 0; font-size: 0.75rem; color: #9ca3af;">Enterprise pricing available</p>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -582,8 +1390,12 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="card-actions">
-                                <a href="https://danapalmandpearl1.netlify.app" class="card-link" target="_blank" rel="noopener">Visit Site</a>
+                            <div class="card-actions" style="display: flex; flex-direction: column; gap: 1rem;">
+                                <button onclick="requestDemo('DanaPalmPearl', 'Dana&rsquo;s Palm and Pearl - Luxury Tropical Consignment Boutique')" style="background: #3b82f6; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">📧 Request Demo Access</button>
+                                <div style="padding: 1rem; background: #f3f4f6; border-radius: 6px; text-align: center;">
+                                    <p style="margin: 0; font-size: 0.875rem; color: #6b7280; font-weight: 600;">💼 Available for Purchase or Lease</p>
+                                    <p style="margin: 0.25rem 0 0 0; font-size: 0.75rem; color: #9ca3af;">Luxury e-commerce platform licensing</p>
+                                </div>
                             </div>
                             <p class="card-note">
                                 Unique market position: first luxury consignment platform with destination-driven shopping and AI-powered valuation, delivering innovative APIs competitors do not offer.
@@ -838,16 +1650,48 @@
 
         // PromedixEMS Payment Functions
         function purchasePromedix(type) {
+            // Collect user email for payment processing
+            const userEmail = prompt('Enter your email for payment confirmation:');
+            if (!userEmail || !validateEmail(userEmail)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
             if (type === 'monthly') {
-                // Replace with your actual Stripe payment link for monthly subscription
-                window.open('https://buy.stripe.com/YOUR_MONTHLY_LINK', '_blank');
-                // For now, show alert
-                alert('Monthly Subscription: $14.99/month\n\nYou will be redirected to secure Stripe checkout.\n\nNote: This will be more expensive when released on App Store/Google Play!');
+                // Create email for monthly subscription
+                const subject = 'PromedixEMS Monthly Subscription - $14.99/month';
+                const body = `Hello,
+
+I would like to purchase a monthly subscription to PromedixEMS for $14.99/month.
+
+My email: ${userEmail}
+Payment type: Monthly Subscription
+Price: $14.99/month
+
+Please send me the Stripe payment link to complete my purchase.
+
+Thank you!`;
+
+                window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                alert('Payment request sent! You will receive a secure Stripe payment link within 1 hour.\n\nNote: This will be more expensive on App Store/Google Play!');
+                
             } else if (type === 'lifetime') {
-                // Replace with your actual Stripe payment link for one-time purchase  
-                window.open('https://buy.stripe.com/YOUR_LIFETIME_LINK', '_blank');
-                // For now, show alert
-                alert('One-time Purchase: $69.99\n\nYou will be redirected to secure Stripe checkout.\n\nNote: This will be more expensive when released on App Store/Google Play!');
+                // Create email for one-time purchase
+                const subject = 'PromedixEMS Lifetime Purchase - $69.99';
+                const body = `Hello,
+
+I would like to purchase PromedixEMS with lifetime access for $69.99.
+
+My email: ${userEmail}
+Payment type: One-time Purchase
+Price: $69.99 (lifetime)
+
+Please send me the Stripe payment link to complete my purchase.
+
+Thank you!`;
+
+                window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                alert('Payment request sent! You will receive a secure Stripe payment link within 1 hour.\n\nNote: This will be more expensive on App Store/Google Play!');
             }
         }
 
@@ -889,53 +1733,6 @@ ${userEmail}`;
             return emailRegex.test(email);
         }
 
-        // PromedixEMS Payment Functions
-        function purchasePromedix(type) {
-            // Collect user email for payment processing
-            const userEmail = prompt('Enter your email for payment confirmation:');
-            if (!userEmail || !validateEmail(userEmail)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            if (type === 'monthly') {
-                // Create email for monthly subscription
-                const subject = 'PromedixEMS Monthly Subscription - $14.99/month';
-                const body = `Hello,
-
-I would like to purchase a monthly subscription to PromedixEMS for $14.99/month.
-
-My email: ${userEmail}
-Payment type: Monthly Subscription
-Price: $14.99/month
-
-Please send me the Stripe payment link to complete my purchase.
-
-Thank you!`;
-
-                window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                alert('Payment request sent! You will receive a secure Stripe payment link within 1 hour.\\n\\nNote: This will be more expensive on App Store/Google Play!');
-                
-            } else if (type === 'lifetime') {
-                // Create email for one-time purchase
-                const subject = 'PromedixEMS Lifetime Purchase - $69.99';
-                const body = `Hello,
-
-I would like to purchase PromedixEMS with lifetime access for $69.99.
-
-My email: ${userEmail}
-Payment type: One-time Purchase
-Price: $69.99 (lifetime)
-
-Please send me the Stripe payment link to complete my purchase.
-
-Thank you!`;
-
-                window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                alert('Payment request sent! You will receive a secure Stripe payment link within 1 hour.\\n\\nNote: This will be more expensive on App Store/Google Play!');
-            }
-        }
-
         // Donation Functions
         function donate(type) {
             const userEmail = prompt('Enter your email for donation confirmation:');
@@ -961,7 +1758,7 @@ Thanks for all the amazing platforms and demos!
 ${userEmail}`;
 
                 window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                alert('Thank you so much! ☕️\n\nYour coffee support means a lot. You will receive a payment link shortly.');
+                alert('Thank you so much! ☕️\n\nYour coffee support means a lot. You\'ll receive a payment link shortly.');
 
             } else if (type === 'support') {
                 // $25 Support donation
@@ -980,7 +1777,7 @@ Keep up the fantastic work!
 ${userEmail}`;
 
                 window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                alert('Thank you for your generous support! 💚\n\nYour contribution helps fund new platform development. You will receive a payment link shortly.');
+                alert('Thank you for your generous support! 💚\n\nYour contribution helps fund new platform development. You\'ll receive a payment link shortly.');
             }
         }
 
