@@ -873,7 +873,7 @@
         });
 
         // PromedixEMS Payment Functions
-        function purchasePromedix(type) {
+        function purchasePromedix(type = 'monthly') {
             // Collect user email for payment processing
             const userEmail = prompt('Enter your email for payment confirmation:');
             if (!userEmail || !validateEmail(userEmail)) {
@@ -881,42 +881,64 @@
                 return;
             }
 
-            if (type === 'monthly') {
-                // Create email for monthly subscription
-                const subject = 'PromedixEMS Monthly Subscription - $14.99/month';
-                const body = `Hello,
+            let subject, body, price;
 
-I would like to purchase a monthly subscription to PromedixEMS for $14.99/month.
+            switch(type) {
+                case 'monthly':
+                    subject = 'PromedixEMS Monthly Subscription - $9.99/month';
+                    price = '$9.99/month';
+                    body = `Hello,
+
+I would like to purchase a monthly subscription to PromedixEMS for $9.99/month.
 
 My email: ${userEmail}
 Payment type: Monthly Subscription
-Price: $14.99/month
+Price: $9.99/month
+Features: All EMT modules, Flashcards, Quizzes, NREMT-style practice tests, Progress tracking
 
 Please send me the Stripe payment link to complete my purchase.
 
 Thank you!`;
+                    break;
+                    
+                case '6months':
+                    subject = 'PromedixEMS 6-Month Access - $49.99';
+                    price = '$49.99 for 6 months';
+                    body = `Hello,
 
-                window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                alert('Payment request sent! You will receive a secure Stripe payment link within 1 hour.\n\nNote: This will be more expensive on App Store/Google Play!');
-                
-            } else if (type === 'lifetime') {
-                // Create email for one-time purchase
-                const subject = 'PromedixEMS Lifetime Purchase - $69.99';
-                const body = `Hello,
+I would like to purchase 6-month access to PromedixEMS for $49.99.
+
+My email: ${userEmail}
+Payment type: 6-Month Access
+Price: $49.99 (6 months)
+Features: All EMT modules, Flashcards, Quizzes, NREMT-style practice tests, Progress tracking
+
+Please send me the Stripe payment link to complete my purchase.
+
+Thank you!`;
+                    break;
+                    
+                case 'lifetime':
+                default:
+                    subject = 'PromedixEMS Lifetime Purchase - $69.99';
+                    price = '$69.99 (lifetime)';
+                    body = `Hello,
 
 I would like to purchase PromedixEMS with lifetime access for $69.99.
 
 My email: ${userEmail}
 Payment type: One-time Purchase
 Price: $69.99 (lifetime)
+Features: All EMT modules, Flashcards, Quizzes, NREMT-style practice tests, Progress tracking
 
 Please send me the Stripe payment link to complete my purchase.
 
 Thank you!`;
-
-                window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                alert('Payment request sent! You will receive a secure Stripe payment link within 1 hour.\n\nNote: This will be more expensive on App Store/Google Play!');
+                    break;
             }
+
+            window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            alert(`Payment request sent for ${price}! You will receive a secure Stripe payment link within 1 hour.\n\nNote: This will be more expensive on App Store/Google Play!`);
         }
 
         // Demo Request Function
