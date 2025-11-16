@@ -1,0 +1,47 @@
+{
+  "products": [
+    {
+      "id": "promedixems",
+      "name": "ProMedixEMS",
+      "description": "EMT learning modules, practice tests, and tracking.",
+      "tiers": [
+        {
+          "id": "student_monthly",
+          "title": "Student / Public Access",
+          "priceLabel": "$9.99 / month",
+          "benefits": [
+            "All EMT modules",
+            "Flashcards",
+            "Quizzes",
+            "Scenario-based questions",
+            "NREMT-style practice tests",
+            "Progress tracking",
+            "Works on all devices"
+          ],
+          "ctaPrimary": "Subscribe – $9.99/mo",
+          "ctaSecondary": "6 months - $49.99",
+          "links": {
+            "subscribe": "https://example.com/checkout?plan=monthly",
+            "secondary": "https://example.com/checkout?plan=6months"
+          }
+        },
+        {
+          "id": "student_6months",
+          "title": "6 Months Access",
+          "priceLabel": "$49.99 / 6 months",
+          "benefits": ["Same as monthly, 6-month bundle"],
+          "ctaPrimary": "Buy 6 months",
+          "links": { "subscribe": "https://example.com/checkout?plan=6months" }
+        },
+        {
+          "id": "student_lifetime",
+          "title": "Lifetime Access",
+          "priceLabel": "$69.99 One-time",
+          "benefits": ["Lifetime access to Student/Public tier content"],
+          "ctaPrimary": "Buy Lifetime",
+          "links": { "subscribe": "https://example.com/checkout?plan=lifetime" }
+        }
+      ]
+    }
+  ]
+}
