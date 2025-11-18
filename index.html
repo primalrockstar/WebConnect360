@@ -3,1847 +3,516 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WebConnect360 - Professional Web Development & Digital Solutions. Enterprise-grade applications and technical consulting services.">
-    <meta name="keywords" content="web development, enterprise applications, digital transformation, technical consulting, cloud solutions, WebConnect360">
-    <meta name="author" content="Shaun Williamson">
-    <meta property="og:title" content="WebConnect360 - Professional Technical Services">
-    <meta property="og:description" content="Enterprise web development and digital solutions. Scalable, secure, and cutting-edge technology implementations.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://webconnect360.com/tech.html">
-    <title>WebConnect360 - Professional Technical Services</title>
+    <title>WebConnect360 · EMS Platforms Reinvented</title>
+    <meta name="description" content="WebConnect360 pairs EMS product teams with modern tooling to ship healthcare platforms without the drag of legacy agencies.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles-new.css">
-    <link rel="icon" href="webconnectlogo.png" type="image/png">
-</head>
-    <style>
-    <!-- Navigation -->
-
-        .nav-brand-text {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            text-decoration: none;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: var(--gray-600);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 0;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-blue);
-            transition: var(--transition);
-        }
-
-        .nav-link:hover {
-            color: var(--primary-blue);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .nav-cta:hover {
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: var(--gradient-dark);
-            color: white;
-            padding: 8rem 0 6rem;
-            margin-top: 70px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.5;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(0, 204, 255, 0.1);
-            border: 1px solid rgba(0, 204, 255, 0.3);
-            color: var(--accent-cyan);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, white, var(--accent-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--gradient-accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 6rem 0;
-            background: white;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-badge {
-            display: inline-block;
-            background: rgba(0, 102, 204, 0.1);
-            color: var(--primary-blue);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--dark-slate);
-            margin-bottom: 1rem;
-        }
-
-        .section-description {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            border: 1px solid var(--gray-200);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--primary-blue);
-        }
-
-        .service-icon {
-            width: 64px;
-            height: 64px;
-            background: var(--gradient-primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-icon svg {
-            width: 32px;
-            height: 32px;
-            fill: white;
-        }
-
-        .service-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark-slate);
-            margin-bottom: 1rem;
-        }
-
-        .service-description {
-            color: var(--gray-600);
-            margin-bottom: 1.5rem;
-        }
-
-        .service-features {
-            list-style: none;
-        }
-
-        .service-features li {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--gray-600);
-        }
-
-        .service-features li::before {
-            content: '✓';
-            color: var(--primary-blue);
-            font-weight: 600;
-        }
-
-        /* Portfolio Section */
-        .portfolio {
-            padding: 6rem 0;
-            background: white;
-        }
-
-        .portfolio-categories {
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
-        }
-
-        .portfolio-category {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .category-header {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-width: 780px;
-        }
-
-        .category-pill {
-            align-self: flex-start;
-            background: rgba(0, 102, 204, 0.1);
-            color: var(--primary-blue);
-            padding: 0.35rem 0.85rem;
-            border-radius: 999px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .category-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--dark-slate);
-        }
-
-        .category-description {
-            font-size: 1.05rem;
-            color: var(--gray-600);
-            line-height: 1.7;
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .portfolio-card {
-            background: white;
-            border: 1px solid var(--gray-200);
-            border-radius: 16px;
-            padding: 2.25rem;
-            box-shadow: var(--shadow-lg);
-            display: flex;
-            flex-direction: column;
-            gap: 1.75rem;
-        }
-
-        .card-header {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        .card-top {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            align-items: center;
-        }
-
-        .project-type {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-        }
-
-        .status-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            padding: 0.35rem 0.75rem;
-            border-radius: 999px;
-            font-size: 0.8125rem;
-            font-weight: 600;
-        }
-
-        .status-live {
-            background: rgba(5, 150, 105, 0.12);
-            color: #0f766e;
-        }
-
-        .status-demo {
-            background: rgba(59, 130, 246, 0.15);
-            color: #1d4ed8;
-        }
-
-        .status-phase {
-            background: rgba(245, 158, 11, 0.18);
-            color: #b45309;
-        }
-
-        .status-enterprise {
-            background: rgba(236, 72, 153, 0.18);
-            color: #be185d;
-        }
-
-        .meta-note {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--gray-600);
-        }
-
-        .card-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--dark-slate);
-        }
-
-        .card-subtitle {
-            font-size: 1.05rem;
-            color: var(--gray-600);
-            line-height: 1.7;
-        }
-
-        .card-body {
-            display: flex;
-            flex-direction: column;
-            gap: 1.75rem;
-        }
-
-        .card-section {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .card-section h4 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--dark-slate);
-        }
-
-        .detail-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.25rem;
-        }
-
-        .detail-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .detail-group h5 {
-            font-size: 0.875rem;
-            font-weight: 700;
-            color: var(--gray-600);
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .simple-list,
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            gap: 0.6rem;
-        }
-
-        .simple-list li {
-            position: relative;
-            padding-left: 1.1rem;
-            color: var(--gray-600);
-            font-size: 0.95rem;
-        }
-
-        .simple-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--primary-blue);
-            font-weight: 700;
-        }
-
-        .feature-list li {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            color: var(--gray-600);
-            font-size: 0.95rem;
-        }
-
-        .check-icon {
-            color: var(--primary-blue);
-            font-weight: 700;
-        }
-
-        .comparison-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            gap: 0.5rem;
-        }
-
-        .comparison-list li {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            color: var(--gray-600);
-            font-size: 0.95rem;
-        }
-
-        .comparison-list li strong {
-            color: var(--dark-slate);
-        }
-
-        .comparison-highlight {
-            margin-top: 0.5rem;
-            padding-top: 0.75rem;
-            border-top: 1px solid var(--gray-200);
-            color: #0f766e;
-            font-weight: 700;
-        }
-
-        .card-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .card-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: 999px;
-            background: var(--primary-blue);
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .card-link:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .card-note {
-            font-size: 0.875rem;
-            color: var(--gray-600);
-            line-height: 1.6;
-        }
-
-        /* Work Order Section */
-        .work-order {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 6rem 0;
-        }
-
-        .work-order .container {
-            max-width: 1100px;
-        }
-
-        .work-order-wrapper {
-            display: grid;
-            gap: 2.5rem;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 24px;
-            padding: 3rem;
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-        }
-
-        .work-order-header {
-            max-width: 540px;
-        }
-
-        .work-order-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .work-order-description {
-            font-size: 1.125rem;
-            opacity: 0.9;
-            line-height: 1.7;
-        }
-
-        .work-order-form {
-            display: grid;
-            gap: 1.5rem;
-        }
-
-        .form-row {
-            display: grid;
-            gap: 1.5rem;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .form-group.full {
-            grid-column: span 2;
-        }
-
-        .form-label {
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 0.95rem;
-            letter-spacing: 0.02em;
-        }
-
-        .required {
-            color: #ffd23f;
-            margin-left: 0.25rem;
-        }
-
-        .form-input,
-        .form-select,
-        .form-textarea {
-            padding: 0.9rem 1rem;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            background: rgba(255, 255, 255, 0.12);
-            color: white;
-            font-size: 1rem;
-            transition: border var(--transition), background var(--transition);
-        }
-
-        .form-input::placeholder,
-        .form-textarea::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: rgba(255, 210, 63, 0.9);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .form-textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        .helper-text {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .consent-group {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 12px;
-            padding: 1rem;
-        }
-
-        .consent-group input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            accent-color: #ffd23f;
-            margin-top: 0.2rem;
-        }
-
-        .consent-group label {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .form-actions {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .work-order-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.85rem 2rem;
-            border-radius: 999px;
-            background: white;
-            color: var(--dark-slate);
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .work-order-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--dark-slate);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .footer-text {
-            opacity: 0.8;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .text-logo-tech {
-                font-size: 1.2rem;
-            }
-
-            .logo-360-tech {
-                font-size: 1rem;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .portfolio {
-                padding: 4rem 0;
-            }
-
-            .category-title {
-                font-size: 1.5rem;
-            }
-
-            .category-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .portfolio-card {
-                padding: 1.75rem;
-            }
-
-            .card-title {
-                font-size: 1.5rem;
-            }
-
-            .card-link {
-                width: 100%;
-            }
-
-            .work-order-wrapper {
-                padding: 2rem;
-            }
-
-            .work-order-title {
-                font-size: 2rem;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .form-group.full {
-                grid-column: span 1;
-            }
-
-            .form-actions {
-                justify-content: center;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <a href="index.html">
-                    <img src="webconnectlogo.png" alt="WebConnect360" style="height: 120px; width: auto;">
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="javascript:void(0)" onclick="purchasePromedix()" class="nav-link" style="color: #4ecdc4; font-weight: 600;">BUY ProMedixEMS</a></li>
-                <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <a href="#contact" class="nav-cta">Get Started</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                    Enterprise-Grade Solutions
-                </div>
-                <h1 class="hero-title">Professional Web Development & Digital Solutions</h1>
-                <p class="hero-subtitle">
-                    Building scalable, secure, and cutting-edge applications for modern businesses. 
-                    From concept to deployment, we deliver enterprise-quality solutions that drive growth.
-                </p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">
-                        Start Your Project
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
-                    <a href="#services" class="btn btn-secondary">
-                        View Services
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Platform Grid Section -->
-    <section class="platforms" id="platforms">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Product Studio</div>
-                <h2 class="section-title">ProMedixEMS™ + StudyConnect™ Platform Grid</h2>
-                <p class="section-description">
-                    Every tile is wired for private demo distribution today with App Store + Google Play releases targeting 2026.
-                    Status labels keep buyers aligned to the delivery roadmap while demo requests continue through direct email.
-                </p>
-                <div class="platform-meta">
-                    <span class="meta-pill">Glassmorphism UI • Secure email demos</span>
-                    <span class="meta-pill meta-pill-muted">App Store + Google Play • Targeting 2026</span>
-                </div>
-            </div>
-
-            <div class="platform-grid-heading">
+    <header class="site-header">
+        <div class="shell nav-bar">
+            <a class="brand" href="#hero" data-scroll>
+                <span class="brand-icon">⚡</span>
                 <div>
-                    <h3>ProMedixEMS™ Suite</h3>
-                    <p>Med-ed stack covering EMT-B through Paramedic plus support tools like VoiceNotes, Flashcards, and PCR Trainer.</p>
+                    <span class="brand-title">WebConnect360</span>
+                    <span class="brand-subtitle">EMS product studio</span>
                 </div>
-                <div class="platform-legend" aria-label="Status legend">
-                    <span class="legend-item"><span class="legend-dot legend-coming"></span>Coming 2026</span>
-                    <span class="legend-item"><span class="legend-dot legend-phase"></span>In Development</span>
-                    <span class="legend-item"><span class="legend-dot legend-demo"></span>Demo Access</span>
+            </a>
+            <nav class="nav">
+                <a href="#platforms" data-scroll>Platforms</a>
+                <a href="#programs" data-scroll>Programs</a>
+                <a href="#build" data-scroll>How we build</a>
+                <a href="#value" data-scroll>Cost & value</a>
+                <a href="about.html">About</a>
+                <a href="#contact" data-scroll>Contact</a>
+            </nav>
+            <a class="btn ghost small" href="mailto:tech@webconnect360.com">Request demo</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero section">
+            <div class="shell hero-grid reveal">
+                <div class="hero-copy">
+                    <p class="pill">Boutique studio · 1-2 clients at a time</p>
+                    <h1>We build launch-ready platforms faster, cheaper, and with more focus.</h1>
+                    <p class="lede">WebConnect360 is an AI-accelerated product studio that turns ideas into polished, production-ready software in weeks—not quarters—while saving 60–80% versus traditional agencies.</p>
+                    <div class="cta-row">
+                        <a class="btn primary" href="#platforms" data-scroll>Explore platforms</a>
+                        <a class="btn outline" href="mailto:tech@webconnect360.com">Request demo</a>
+                    </div>
+                    <p class="hero-note">Where agencies juggle 10–20 clients, we juggle two—sometimes one—so you get direct builder access and rapid approvals.</p>
+                    <ul class="hero-stats">
+                        <li>
+                            <span class="stat">4-6 weeks</span>
+                            <span class="label">Pilot launch</span>
+                        </li>
+                        <li>
+                            <span class="stat">60-80%</span>
+                            <span class="label">Average cost reduction</span>
+                        </li>
+                        <li>
+                            <span class="stat">Compliance-first</span>
+                            <span class="label">HIPAA · FERPA · SOC 2 patterns</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero-panel">
+                    <div class="panel-header">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                        <span class="panel-label">promedixems.config.ts</span>
+                    </div>
+                                                            <pre><code>export const sprint = defineLaunch({
+                        pilotWindow: '4-6 weeks',
+                        savings: '60-80% vs agency retainers',
+                        scope: ['Healthcare', 'Entertainment', 'Real estate', 'Ecommerce'],
+                        compliance: ['HIPAA', 'FERPA', 'SOC 2-ready'],
+                    });</code></pre>
+                                                            <p class="panel-foot">Same playbook no matter the industry—short pilots, safe data practices, measurable savings.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="product-grid" id="promedix-grid" aria-live="polite"></div>
-
-            <div class="store-teaser" aria-label="App stores 2026 teaser">
-                <div class="store-badge disabled">
-                    <div class="store-icon"></div>
+        <section class="section narrative what-we-do">
+            <div class="shell reveal">
+                <div class="copy-grid">
                     <div>
-                        <p class="store-label">App Store</p>
-                        <p class="store-meta">Dual platform launch • 2026</p>
+                        <p class="eyebrow">What we do</p>
+                        <h2>We build launch-ready platforms faster, cheaper, and with more focus than traditional agencies.</h2>
+                        <p>WebConnect360 is a boutique, AI-accelerated studio that helps businesses turn ideas into polished, production-ready software in a fraction of the usual time and cost.</p>
+                        <p>Where agencies spread themselves thin, we work deeply with only one or two clients at a time—ensuring unmatched attention, speed, and quality.</p>
+                    </div>
+                    <div class="callout-card">
+                        <p class="eyebrow">How we streamline delivery</p>
+                        <ul class="icon-list">
+                            <li><strong>AI-assisted engineering</strong> — reduces build time by 60–80%.</li>
+                            <li><strong>Reusable, pre-tested service components</strong> — auth, dashboards, forms, workflow engines.</li>
+                            <li><strong>Human expert review</strong> — EMS, healthcare, training, operations, logistics, and digital strategy.</li>
+                            <li><strong>Continuous previews</strong> — instant stakeholder feedback.</li>
+                        </ul>
+                        <p class="callout-note">You get enterprise-grade software without enterprise-grade pricing or wait times.</p>
                     </div>
                 </div>
-                <div class="store-badge disabled">
-                    <div class="store-icon">▶</div>
-                    <div>
-                        <p class="store-label">Google Play</p>
-                        <p class="store-meta">Matching feature set • 2026</p>
-                    </div>
-                </div>
-                <p class="store-note">Badges stay greyed-out until Apple/Google approvals land. Email demos go out today.</p>
             </div>
+        </section>
 
-            <div class="platform-grid-heading">
+        <section class="section marquee">
+            <div class="shell reveal">
+                <p class="eyebrow">Trusted inside hybrid crews & clinical teams</p>
+                <div class="marquee-track" role="presentation">
+                    <div class="marquee-row">
+                        <span>ProMedixEMS</span>
+                        <span>StudyConnectPRO</span>
+                        <span>VoiceNotes</span>
+                        <span>PCR Practice</span>
+                        <span>EMT-B Core</span>
+                    </div>
+                    <div class="marquee-row" aria-hidden="true">
+                        <span>ProMedixEMS</span>
+                        <span>StudyConnectPRO</span>
+                        <span>VoiceNotes</span>
+                        <span>PCR Practice</span>
+                        <span>EMT-B Core</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="platforms" class="section platforms">
+            <div class="shell">
+                <div class="section-header reveal">
+                    <p class="eyebrow">Platform grid</p>
+                    <h2>One platform model, any industry.</h2>
+                    <p>The same AI-assisted scaffolding, component library, and compliance controls power EMS training suites, fan engagement portals, brokerage dashboards, and ecommerce command centers.</p>
+                </div>
+                <p class="platform-note">EMT-B Core is the only public demo today. All other ProMedixEMS modules, plus non-medical builds, stay in private waitlists until launch contracts are signed.</p>
+                <div id="platform-grid" class="platform-grid reveal" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section studyconnect">
+            <div class="shell">
+                <div class="section-header reveal">
+                    <p class="eyebrow">StudyConnect™ suite</p>
+                    <h2>Capture interest, escalate to HIPAA-ready ops.</h2>
+                    <p>These builds show how we spin up net-new funnels in days, then graduate qualified traffic into audited back-office workflows without throwing away the first prototype.</p>
+                </div>
+                <div class="studyconnect-grid reveal">
+                    <article class="study-card">
+                        <div class="study-card-header">
+                            <p class="badge">Public pre-screen</p>
+                            <h3>StudyConnect™</h3>
+                            <p class="subtitle">60-second anonymous pre-screen that routes qualified dental + medical leads into WebConnect360 pipelines.</p>
+                        </div>
+                        <ul class="study-list">
+                            <li>3-question flow with ZIP, age, and intent only—no PHI collected.</li>
+                            <li>Trust badges, progress bar, and instant qualification messaging.</li>
+                            <li>Deployed on lightweight HTML/CSS/JS for Netlify or static hosting.</li>
+                        </ul>
+                        <div class="study-meta">
+                            <span>Launch-ready in 1-2 weeks</span>
+                            <span>$4k–$6k accelerated build</span>
+                        </div>
+                        <div class="card-actions">
+                            <a class="btn primary" href="mailto:tech@webconnect360.com?subject=StudyConnect" aria-label="Request StudyConnect demo">Request demo</a>
+                        </div>
+                    </article>
+                    <article class="study-card highlight">
+                        <div class="study-card-header">
+                            <p class="badge">Enterprise backend</p>
+                            <h3>StudyConnectPro™</h3>
+                            <p class="subtitle">FastAPI + PostgreSQL stack with RBAC, PHI encryption, audit trails, and deployment templates for AWS.</p>
+                        </div>
+                        <ul class="study-list">
+                            <li>Eligibility engine with automated scoring + Pydantic validation.</li>
+                            <li>Consent vaults, immutable audit logs, and HIPAA-ready runbooks.</li>
+                            <li>Demo endpoints + API docs for coordinators, PIs, and admins.</li>
+                        </ul>
+                        <div class="study-meta">
+                            <span>Pilot in 4-6 weeks</span>
+                            <span>$25k–$35k accelerated build</span>
+                        </div>
+                        <div class="card-actions">
+                            <a class="btn primary" href="mailto:tech@webconnect360.com?subject=StudyConnectPro" aria-label="Request StudyConnectPro demo">Request demo</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section industries">
+            <div class="shell reveal">
+                <div class="section-header">
+                    <p class="eyebrow">Built for any industry</p>
+                    <h2>Forms, dashboards, workflows, mobile—we adapt the same platform model everywhere.</h2>
+                    <p>Although we specialize in EMS, healthcare, and research operations, our component library works for nearly any domain.</p>
+                </div>
+                <div class="industry-grid">
+                    <article class="industry-card">
+                        <h3>Entertainment</h3>
+                        <p>Artist sites, fan portals, booking hubs, merch drops.</p>
+                    </article>
+                    <article class="industry-card">
+                        <h3>Real estate</h3>
+                        <p>Listing tools, showing schedulers, agent dashboards.</p>
+                    </article>
+                    <article class="industry-card">
+                        <h3>Ecommerce</h3>
+                        <p>Product catalogs, mobile checkout systems, resale platforms.</p>
+                    </article>
+                    <article class="industry-card">
+                        <h3>Education</h3>
+                        <p>Microlearning, course builders, exam prep engines.</p>
+                    </article>
+                    <article class="industry-card">
+                        <h3>Recruiting</h3>
+                        <p>Study pre-screening, workforce funnels, staffing dashboards.</p>
+                    </article>
+                    <article class="industry-card">
+                        <h3>Professional services</h3>
+                        <p>Client portals, automated intake flows, reporting suites.</p>
+                    </article>
+                </div>
+                <p class="industry-foot">If it needs forms, dashboards, workflows, or a mobile experience—we can build it.</p>
+            </div>
+        </section>
+
+        <section id="programs" class="section programs">
+            <div class="shell">
+                <div class="section-header reveal">
+                    <p class="eyebrow">Boutique engagement model</p>
+                    <h2>One or two clients at a time means faster answers and higher-quality output.</h2>
+                    <p>No layers of account teams—just product strategists, engineers, and compliance consultants working directly with your leads so decisions happen daily, not quarterly.</p>
+                </div>
+                <div class="programs-grid reveal">
+                    <article class="program-card">
+                        <p class="badge">Operational readiness kits</p>
+                        <h3>Launch programs without spreadsheets.</h3>
+                        <ul class="program-list">
+                            <li>Role-specific workspaces for instructors, investors, agents, or store managers.</li>
+                            <li>Live readiness dashboard with remediation queues, expirations, and blockers.</li>
+                            <li>Scenario labs and playbooks recycled across healthcare, entertainment, and commerce.</li>
+                        </ul>
+                    </article>
+                    <article class="program-card">
+                        <p class="badge">Evidence & compliance</p>
+                        <h3>Audits, HIPAA, FERPA—handled.</h3>
+                        <ul class="program-list">
+                            <li>Pre-built consent flows, RBAC, and audit logging ready for healthcare or finance.</li>
+                            <li>Exportable reports for regulators, boards, and enterprise stakeholders.</li>
+                            <li>Integrations for credential tracking, ticketing, real-estate CRMs, and sponsor readouts.</li>
+                        </ul>
+                    </article>
+                    <article class="program-card">
+                        <p class="badge">People + systems</p>
+                        <h3>Humans on call, systems on repeat.</h3>
+                        <ul class="program-list">
+                            <li>AI assist drafts copy, flows, and documentation—humans tighten and ship.</li>
+                            <li>Slack, SMS, and office hours with the people actually writing your software.</li>
+                            <li>30/60/90 impact reviews tied to revenue, enrollments, conversions, and QA metrics.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="proof-grid reveal">
+                    <article class="testimonial-card">
+                        <p class="quote">“WebConnect360 shipped our paramedic bridge portal faster than our internal approval chain. The compliance packets were ready the same day we opened enrollment.”</p>
+                        <div class="program-meta">
+                            <p><strong>Erica Chan</strong></p>
+                            <p class="role">Program Director, Allied Health system</p>
+                        </div>
+                    </article>
+                    <article class="proof-card">
+                        <h3>Program proof points</h3>
+                        <ul class="program-list small">
+                            <li>72% faster cohort onboarding vs previous RFP cycle.</li>
+                            <li>Zero findings on FERPA/HIPAA audits using StudyConnectPro™ runbooks.</li>
+                            <li>Monthly decks auto-generated from the shared telemetry layer.</li>
+                        </ul>
+                        <div class="proof-meta">
+                            <span>Templates adapt across healthcare, entertainment, real estate, and commerce.</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section boutique">
+            <div class="shell reveal">
+                <div class="section-header">
+                    <p class="eyebrow">Boutique advantage</p>
+                    <h2>Most agencies juggle 10–20 clients. We juggle two. Sometimes one.</h2>
+                    <p>You get startup velocity plus the service of a private studio.</p>
+                </div>
+                <ul class="boutique-list">
+                    <li>Faster response times because decision-makers stay in the room.</li>
+                    <li>Direct communication with the actual builders—no account-manager middlemen.</li>
+                    <li>Work tailored to your exact operation, not a generic playbook.</li>
+                    <li>Smoother revisions and faster approvals thanks to daily touchpoints.</li>
+                    <li>No bureaucracy, no inflated hours, no surprises.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="build" class="section build">
+            <div class="shell build-grid reveal">
                 <div>
-                    <h3>StudyConnect™ Clinical Platforms</h3>
-                    <p>Dental and clinical research intake operating as invite-only demos with HIPAA-grade infrastructure.</p>
+                    <p class="eyebrow">How we build</p>
+                    <h2>AI-accelerated squads, senior reviewers.</h2>
+                    <p>Copilots generate wireframes, tests, and scaffolds in minutes; leads review, harden, and deploy so you see functional previews every few days instead of waiting for slide decks.</p>
+                </div>
+                <div class="build-list">
+                    <div class="build-card">
+                        <h3>Transparent workflows</h3>
+                        <p>Timeline, prompts, and pull requests stay visible so you know exactly where the savings come from.</p>
+                    </div>
+                    <div class="build-card">
+                        <h3>Clinical-grade starter kits</h3>
+                        <p>Pre-built auth, audit trails, accessibility tokens, and consent packs keep HIPAA, FERPA, and SOC 2 needs covered.</p>
+                    </div>
+                    <div class="build-card">
+                        <h3>Continuous previews</h3>
+                        <p>Every sprint posts a live preview link—marketing, compliance, and ops can click through instead of waiting for PDF summaries.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="product-grid" id="studyconnect-grid" aria-live="polite"></div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Our Expertise</div>
-                <h2 class="section-title">Professional Technical Services</h2>
-                <p class="section-description">
-                    Comprehensive web development and digital transformation services 
-                    designed to elevate your business in the digital landscape.
-                </p>
+        <section id="value" class="section value">
+            <div class="shell reveal">
+                <div class="section-header">
+                    <p class="eyebrow">Cost & value</p>
+                    <h2>Traditional design houses vs WebConnect360.</h2>
+                </div>
+                <p class="value-intro">Where agencies charge for overhead, we charge for outcomes. Traditional digital shops spend your budget on PM layers, internal approvals, endless meetings, and slow handoffs. We cut through all of it with AI-accelerated delivery and a lean studio model.</p>
+                <ul class="value-list">
+                    <li>We don’t waste time.</li>
+                    <li>We don’t pad hours.</li>
+                    <li>We don’t force long RFP cycles.</li>
+                    <li>We simply build.</li>
+                </ul>
+                <div class="value-grid">
+                    <article class="value-card">
+                        <p class="card-label">Large design house</p>
+                        <ul>
+                            <li>3-6 month discovery before a single feature ships.</li>
+                            <li>Project teams rotate; knowledge resets every handoff.</li>
+                            <li>Compliance, automation, or data layers priced as add-ons.</li>
+                            <li>Monthly retainers of $120k–$200k for enterprise staffing.</li>
+                        </ul>
+                    </article>
+                    <article class="value-card highlight">
+                        <p class="card-label">WebConnect360</p>
+                        <ul>
+                            <li>Pilot-ready builds in 4–6 weeks with live previews every sprint.</li>
+                            <li>60–80% cheaper by pairing AI-generated scaffolds with senior reviewers.</li>
+                            <li>Direct access to product, engineering, and compliance leads.</li>
+                            <li>Includes runbooks, support lanes, and compliance evidence as part of scope.</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Enterprise Web Applications</h3>
-                    <p class="service-description">
-                        Custom web applications built with modern frameworks and best practices. 
-                        Scalable, secure, and optimized for performance.
-                    </p>
-                    <ul class="service-features">
-                        <li>React, Vue.js, Angular development</li>
-                        <li>Node.js and Python backends</li>
-                        <li>Database design and optimization</li>
-                        <li>API development and integration</li>
-                        <li>Cloud deployment and scaling</li>
+        </section>
+
+        <section class="section fast-dev">
+            <div class="shell reveal">
+                <div class="section-header">
+                    <p class="eyebrow">Faster development</p>
+                    <h2>Focused teams, zero bureaucracy.</h2>
+                    <p>4–6 week pilots, micro-teams, and real humans reviewing every build.</p>
+                </div>
+                <ul class="stat-list">
+                    <li>4–6 week pilot launches.</li>
+                    <li>Dedicated micro-team (designer + engineer + product lead).</li>
+                    <li>Every build audited by a human domain expert.</li>
+                    <li>Live previews every 24–72 hours.</li>
+                    <li>No waiting in agency queues.</li>
+                    <li>No bloated PM process.</li>
+                    <li>No surprises.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section cost-analysis">
+            <div class="shell reveal">
+                <div class="section-header">
+                    <p class="eyebrow">Cost analysis</p>
+                    <h2>Cost comparison: Traditional agency vs WebConnect360</h2>
+                    <p>Realistic 2025 market numbers so you can see the delta.</p>
+                </div>
+                <div class="table-wrap">
+                    <table class="cost-table" role="table">
+                        <thead>
+                            <tr>
+                                <th>Build type</th>
+                                <th>Traditional agency</th>
+                                <th>WebConnect360</th>
+                                <th>Savings</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Landing page</td>
+                                <td>$8k–$15k</td>
+                                <td>$2k–$4k</td>
+                                <td>65%–75%</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing site (5–7 pages)</td>
+                                <td>$25k–$45k</td>
+                                <td>$6k–$10k</td>
+                                <td>60%–75%</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile app (iOS/Android)</td>
+                                <td>$80k–$180k</td>
+                                <td>$15k–$30k</td>
+                                <td>75%+</td>
+                            </tr>
+                            <tr>
+                                <td>HIPAA-ready backend</td>
+                                <td>$100k–$250k</td>
+                                <td>$25k–$35k</td>
+                                <td>65%–85%</td>
+                            </tr>
+                            <tr>
+                                <td>Ongoing maintenance</td>
+                                <td>$3k–$10k/mo</td>
+                                <td>$750–$1.5k/mo</td>
+                                <td>70%+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="why-savings">
+                    <p><strong>Why so much cheaper?</strong></p>
+                    <ul>
+                        <li>AI handles scaffolding, boilerplate, and repetitive tasks.</li>
+                        <li>We use pre-vetted components from previous builds.</li>
+                        <li>No bloated staff or PM overhead.</li>
+                        <li>You pay for actual product work, not status meetings.</li>
+                        <li>We automate everything that can be automated.</li>
                     </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M7 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H7zm5 19c-.83 0-1.5-.67-1.5-1.5S11.17 18 12 18s1.5.67 1.5 1.5S12.83 21 12 21zm3-4H9V5h6v12z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Mobile App Experience Design</h3>
-                    <p class="service-description">
-                        Crafting mobile-first product experiences for iOS and Android that extend your platform into the hands of consumers with the same enterprise polish and performance expectations.
-                    </p>
-                    <ul class="service-features">
-                        <li>Full-stack UX for native and cross-platform apps</li>
-                        <li>Design systems aligned with Apple App Store &amp; Google Play policies</li>
-                        <li>Motion design, micro-interactions, and onboarding flows</li>
-                        <li>API architecture for real-time data sync</li>
-                        <li>Launch readiness: store assets, submission guidance</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Digital Transformation</h3>
-                    <p class="service-description">
-                        Strategic digital solutions to modernize your business processes 
-                        and improve operational efficiency.
-                    </p>
-                    <ul class="service-features">
-                        <li>Business process automation</li>
-                        <li>Legacy system modernization</li>
-                        <li>Cloud migration strategies</li>
-                        <li>Data analytics and reporting</li>
-                        <li>Security and compliance</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Live Projects</div>
-                <h2 class="section-title">Portfolio &amp; Value Comparison</h2>
-                <p class="section-description">
-                    <strong>AI-Accelerated Development:</strong> By leveraging AI throughout discovery, design, and engineering we deliver enterprise-grade solutions faster and more cost-effectively while maintaining quality and compliance.
-                </p>
-            </div>
-
-            <div class="portfolio-categories">
-                <div class="portfolio-category">
-                    <div class="category-header">
-                        <span class="category-pill">Professional Services</span>
-                        <h3 class="category-title">Enterprise Technical Platforms</h3>
-                        <p class="category-description">
-                            WebConnect360 Tech serves as the flagship enterprise services experience, pairing transparent pricing, integrated payments, and modular content blocks designed to scale seamlessly as the portfolio grows toward ten or more platforms.
-                        </p>
-                    </div>
-                    <div class="category-grid">
-                        <article class="portfolio-card" data-status="live">
-                            <header class="card-header">
-                                <div class="card-top">
-                                    <span class="project-type">Enterprise Technical Services Platform</span>
-                                    <span class="status-pill status-live">Live Production</span>
-                                </div>
-                                <h3 class="card-title">WebConnect360.com</h3>
-                                <p class="card-subtitle">
-                                    Professional tech-focused website showcasing enterprise web development services. Features a clean, modern interface with comprehensive service portfolio, detailed project showcases, transparent pricing, and secure payment integration. Built as a self-contained, deployment-ready solution.
-                                </p>
-                            </header>
-                            <div class="card-body">
-                                <div class="card-section">
-                                    <h4>Technical Architecture</h4>
-                                    <div class="detail-grid">
-                                        <div class="detail-group">
-                                            <h5>Frontend Technology</h5>
-                                            <ul class="simple-list">
-                                                <li>Self-contained HTML5 &amp; CSS3</li>
-                                                <li>Professional design system</li>
-                                                <li>CSS Grid &amp; Flexbox layouts</li>
-                                                <li>Mobile-first responsive design</li>
-                                            </ul>
-                                        </div>
-                                        <div class="detail-group">
-                                            <h5>User Experience</h5>
-                                            <ul class="simple-list">
-                                                <li>Smooth scroll navigation</li>
-                                                <li>Interactive animations</li>
-                                                <li>Professional form handling</li>
-                                                <li>Optimized performance</li>
-                                            </ul>
-                                        </div>
-                                        <div class="detail-group">
-                                            <h5>Business Features</h5>
-                                            <ul class="simple-list">
-                                                <li>Service portfolio showcase</li>
-                                                <li>Integrated payment options</li>
-                                                <li>Professional contact forms</li>
-                                                <li>SEO-optimized structure</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-section">
-                                    <h4>Key Features</h4>
-                                    <ul class="feature-list">
-                                        <li><span class="check-icon">✓</span>Enterprise service showcase</li>
-                                        <li><span class="check-icon">✓</span>Detailed project portfolios</li>
-                                        <li><span class="check-icon">✓</span>Transparent pricing tiers</li>
-                                        <li><span class="check-icon">✓</span>Secure payment integration</li>
-                                        <li><span class="check-icon">✓</span>Professional contact system</li>
-                                        <li><span class="check-icon">✓</span>Self-contained deployment</li>
-                                    </ul>
-                                </div>
-                                <div class="card-section value-section">
-                                    <h4>Development &amp; Value Comparison</h4>
-                                    <ul class="comparison-list">
-                                        <li><span>Basic Business Website</span><strong>$3,000 - $8,000</strong></li>
-                                        <li><span>Professional Service Platform</span><strong>$12,000 - $25,000</strong></li>
-                                        <li><span>AI-Accelerated Development</span><strong>$3,500 - $6,500</strong></li>
-                                        <li><span>Development Timeline</span><strong>3-4 weeks vs 8-12 weeks</strong></li>
-                                        <li class="comparison-highlight"><span>Total Client Savings</span><strong>$8,500 - $18,500 + 65% faster delivery</strong></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-actions">
-                                <a href="https://webconnect360.com" class="card-link" target="_blank" rel="noopener">Live Site</a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="portfolio-category">
-                    <div class="category-header">
-                        <span class="category-pill">Education &amp; Training</span>
-                        <h3 class="category-title">Healthcare Learning Systems</h3>
-                        <p class="category-description">
-                            Immersive healthcare education platforms combine glassmorphism design, AI acceleration, and compliance-aware content delivery to modernize training for medical teams while remaining extensible for future regional deployments.
-                        </p>
-                    </div>
-                    <div class="category-grid">
-                        <article class="portfolio-card" data-status="live">
-                            <header class="card-header">
-                                <div class="card-top">
-                                    <span class="project-type">Comprehensive EMT Training Platform</span>
-                                    <span class="status-pill status-live">Live Production</span>
-                                    <span class="meta-note">Health Score: 90/100</span>
-                                </div>
-                                <h3 class="card-title">ProMedixEMS.com</h3>
-                                <p class="card-subtitle">
-                                    Next-generation Emergency Medical Technician training platform featuring ultra-modern glassmorphism design, exhaustive curriculum coverage, and interactive learning tools engineered for real-world competency.
-                                </p>
-                            </header>
-                            <div class="card-body">
-                                <div class="card-section">
-                                    <h4>Technical Architecture</h4>
-                                    <div class="detail-grid">
-                                        <div class="detail-group">
-                                            <h5>Modern React Stack</h5>
-                                            <ul class="simple-list">
-                                                <li>React 18.3.1 with TypeScript</li>
-                                                <li>Vite 4.5.0 build system</li>
-                                                <li>React Router DOM 6.27.0</li>
-                                                <li>Tailwind CSS 3.4.17</li>
-                                            </ul>
-                                        </div>
-                                        <div class="detail-group">
-                                            <h5>Advanced Features</h5>
-                                            <ul class="simple-list">
-                                                <li>Fuzzy search via Fuse.js 7.1.0</li>
-                                                <li>PWA capabilities with offline mode</li>
-                                                <li>Glassmorphism UI with rich motion</li>
-                                                <li>Real-time voice transcription tooling</li>
-                                            </ul>
-                                        </div>
-                                        <div class="detail-group">
-                                            <h5>Content &amp; Security</h5>
-                                            <ul class="simple-list">
-                                                <li>45-chapter curriculum coverage</li>
-                                                <li>Role-based authentication</li>
-                                                <li>HIPAA-aware interface design</li>
-                                                <li>NREMT standards alignment</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-section">
-                                    <h4>Key Capabilities</h4>
-                                    <ul class="feature-list">
-                                        <li><span class="check-icon">✓</span>National Protocol Foundation with 13 NHTSA 2022 protocols</li>
-                                        <li><span class="check-icon">✓</span>Skills Practice Lab featuring 25 immersive scenarios</li>
-                                        <li><span class="check-icon">✓</span>Skills Flow Lab for scenario-driven sequencing</li>
-                                        <li><span class="check-icon">✓</span>14 modules with 45 enhanced chapters and clinical pearls</li>
-                                        <li><span class="check-icon">✓</span>675+ interactive flashcards with spaced repetition</li>
-                                        <li><span class="check-icon">✓</span>Enhanced quiz system with 750 questions (300 scenario-based)</li>
-                                        <li><span class="check-icon">✓</span>Real-time voice-to-text lecture transcription</li>
-                                        <li><span class="check-icon">✓</span>Clinical calculators and PCR documentation practice</li>
-                                    </ul>
-                                </div>
-                                <div class="card-section value-section">
-                                    <h4>Development &amp; Value Comparison</h4>
-                                    <ul class="comparison-list">
-                                        <li><span>Basic Educational Platform</span><strong>$35,000 - $60,000</strong></li>
-                                        <li><span>Premium EMS Platform (Skills Lab + Protocols)</span><strong>$80,000 - $150,000</strong></li>
-                                        <li><span>AI-Accelerated Modern Development</span><strong>$18,000 - $28,000</strong></li>
-                                        <li><span>Development Timeline</span><strong>10-12 weeks vs 28-36 weeks</strong></li>
-                                        <li class="comparison-highlight"><span>Total Client Savings</span><strong>$52,000 - $122,000 + 70% faster delivery</strong></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-actions" style="display: flex; flex-direction: column; gap: 1rem;">
-                                <!-- App Store Teaser -->
-                                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 8px; text-align: center; margin-bottom: 1rem;">
-                                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1rem; font-weight: 600;">📱 Coming Soon: iOS & Android Apps!</h4>
-                                    <p style="margin: 0; font-size: 0.875rem; opacity: 0.9;">Get it cheaper here before mobile launch</p>
-                                </div>
-                                
-                                <!-- Payment Options -->
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                                    <button onclick="purchasePromedix('monthly')" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 1rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.9rem;">
-                                        💳 Subscribe $14.99/mo
-                                    </button>
-                                    <button onclick="purchasePromedix('lifetime')" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 1rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.9rem;">
-                                        🚀 Buy Now $69.99
-                                    </button>
-                                </div>
-                                
-                                <button onclick="requestDemo('PromedixEMS', 'ProMedixEMS.com - Healthcare EMT Training Platform')" style="background: #6b7280; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; width: 100%;">
-                                    📧 Request Demo Access
-                                </button>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="portfolio-category">
-                    <div class="category-header">
-                        <span class="category-pill">Clinical Platforms</span>
-                        <h3 class="category-title">Medical Research &amp; Compliance</h3>
-                        <p class="category-description">
-                            Research platforms illustrate the progression from rapid pre-screening MVPs to enterprise-grade HIPAA-compliant infrastructure with microservices, audit trails, and automated PHI safeguards.
-                        </p>
-                    </div>
-                    <div class="category-grid">
-                        <article class="portfolio-card" data-status="phase">
-                            <header class="card-header">
-                                <div class="card-top">
-                                    <span class="project-type">Clinical Research Pre-Screening Platform</span>
-                                    <span class="status-pill status-phase">Pre-Screening Phase</span>
-                                    <span class="meta-note">HIPAA backend planned</span>
-                                </div>
-                                <h3 class="card-title">StudyConnect</h3>
-                                <p class="card-subtitle">
-                                    Pre-screening platform for clinical trial participant identification and initial data collection. The current implementation demonstrates modern interface design and workflow foundations ahead of a full HIPAA-compliant release.
-                                </p>
-                            </header>
-                            <div class="card-body">
-                                <div class="card-section">
-                                    <h4>Technical Architecture</h4>
-                                    <div class="detail-grid">
-                                        <div class="detail-group">
-                                            <h5>Frontend (Current)</h5>
-                                            <ul class="simple-list">
-                                                <li>React 18 with Hooks</li>
-                                                <li>Modern JavaScript (ES2023)</li>
-                                                <li>CSS Grid &amp; Flexbox layout</li>
-                                                <li>Responsive experience design</li>
-                                            </ul>
-                                        </div>
-                                        <div class="detail-group">
-                                            <h5>Backend (Next Phase)</h5>
-                                            <ul class="simple-list">
-                                                <li>Node.js Express API</li>
-                                                <li>HIPAA-compliant database</li>
-                                                <li>End-to-end encryption</li>
-                                                <li>JWT authentication</li>
-                                            </ul>
-                                        </div>
-                                        <div class="detail-group">
-                                            <h5>Deployment &amp; Features</h5>
-                                            <ul class="simple-list">
-                                                <li>Netlify static hosting</li>
-                                                <li>Form handling &amp; validation</li>
-                                                <li>Pre-screening workflows</li>
-                                                <li>SSL/TLS encryption</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-section">
-                                    <h4>Current Capabilities</h4>
-                                    <ul class="feature-list">
-                                        <li><span class="check-icon">✓</span>Interactive screening questionnaires</li>
-                                        <li><span class="check-icon">✓</span>Modern responsive interface design</li>
-                                        <li><span class="check-icon">✓</span>Form validation with user feedback</li>
-                                        <li><span class="check-icon">✓</span>Multi-step workflow demonstration</li>
-                                    </ul>
-                                </div>
-                                <div class="card-section">
-                                    <h4>Next Phase Roadmap</h4>
-                                    <ul class="simple-list">
-                                        <li>HIPAA-compliant backend implementation</li>
-                                        <li>Secure data storage with audit trails</li>
-                                    </ul>
-                                </div>
-                                <div class="card-section value-section">
-                                    <h4>Development &amp; Value Comparison</h4>
-                                    <ul class="comparison-list">
-                                        <li><span>Basic Pre-Screening Platform</span><strong>$8,000 - $15,000</strong></li>
-                                        <li><span>Custom Research Platform</span><strong>$25,000 - $45,000</strong></li>
-                                        <li><span>AI-Accelerated Development</span><strong>$3,500 - $6,500</strong></li>
-                                        <li><span>Development Timeline</span><strong>2-3 weeks vs 8-12 weeks</strong></li>
-                                        <li class="comparison-highlight"><span>Total Client Savings</span><strong>$18,500 - $38,500 + 75% faster delivery</strong></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-actions" style="display: flex; flex-direction: column; gap: 1rem;">
-                                <button onclick="requestDemo('StudyConnect', 'StudyConnect - Clinical Research Pre-Screening Platform')" style="background: #3b82f6; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">📧 Request Demo Access</button>
-                                <div style="padding: 1rem; background: #f3f4f6; border-radius: 6px; text-align: center;">
-                                    <p style="margin: 0; font-size: 0.875rem; color: #6b7280; font-weight: 600;">💼 Available for Purchase or Lease</p>
-                                    <p style="margin: 0.25rem 0 0 0; font-size: 0.75rem; color: #9ca3af;">Contact for custom pricing</p>
-                                </div>
-                            </div>
-                            <p class="card-note">
-                                For full HIPAA-compliant medical screening with secure data handling, pricing ranges from $15,000 to $25,000. This release focuses on pre-screening only.
-                            </p>
-                        </article>
-
-                        <article class="portfolio-card" data-status="enterprise">
-                            <header class="card-header">
-                                <div class="card-top">
-                                    <span class="project-type">Enterprise HIPAA-Compliant Research Platform</span>
-                                    <span class="status-pill status-enterprise">Enterprise Demo</span>
-                                    <span class="meta-note">Full backend infrastructure</span>
-                                </div>
-                                <h3 class="card-title">StudyConnectPRO</h3>
-                                <p class="card-subtitle">
-                                    Enterprise-grade HIPAA-compliant dental research platform with FastAPI microservices, PostgreSQL, Dockerized deployment, and AWS-native security hardening. Built with AI-accelerated engineering for rapid delivery without compromising compliance.
-                                </p>
-                            </header>
-                            <div class="card-body">
-                                <div class="card-section">
-                                    <h4>Technical Architecture</h4>
-                                    <div class="detail-grid">
-                                        <div class="detail-group">
-                                            <h5>Backend Infrastructure</h5>
-                                            <ul class="simple-list">
-                                                <li>Python 3.12 + FastAPI microservices</li>
-                                                <li>PostgreSQL with SQLAlchemy 2.0</li>
-                                                <li>Docker containerized architecture</li>
-                                                <li>JWT authentication with RBAC</li>
-                                            </ul>
-                                        </div>
-                                        <div class="detail-group">
-                                            <h5>Security &amp; Compliance</h5>
-                                            <ul class="simple-list">
-                                                <li>HIPAA BAA-ready infrastructure</li>
-                                                <li>TLS 1.3 encryption &amp; PHI scrubbing</li>
-                                                <li>Immutable audit logging</li>
-                                                <li>AWS Cognito MFA enforcement</li>
-                                            </ul>
-                                        </div>
-                                        <div class="detail-group">
-                                            <h5>AWS Deployment</h5>
-                                            <ul class="simple-list">
-                                                <li>ECS Fargate, RDS, S3, and KMS</li>
-                                                <li>Terraform infrastructure as code</li>
-                                                <li>Auto-scaling with load balancing</li>
-                                                <li>CloudTrail &amp; GuardDuty monitoring</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-section">
-                                    <h4>Enterprise Features</h4>
-                                    <ul class="feature-list">
-                                        <li><span class="check-icon">✓</span>Full FastAPI microservices architecture</li>
-                                        <li><span class="check-icon">✓</span>PostgreSQL with managed migrations</li>
-                                        <li><span class="check-icon">✓</span>HIPAA-compliant data handling</li>
-                                        <li><span class="check-icon">✓</span>Role-based access control (4 levels)</li>
-                                        <li><span class="check-icon">✓</span>Real-time security monitoring</li>
-                                        <li><span class="check-icon">✓</span>Automated PHI scrubbing pipelines</li>
-                                        <li><span class="check-icon">✓</span>Multi-site study management</li>
-                                        <li><span class="check-icon">✓</span>Comprehensive audit trails</li>
-                                        <li><span class="check-icon">✓</span>Docker-based enterprise scalability</li>
-                                        <li><span class="check-icon">✓</span>AI-accelerated development workflows</li>
-                                    </ul>
-                                </div>
-                                <div class="card-section value-section">
-                                    <h4>Development &amp; Value Comparison</h4>
-                                    <ul class="comparison-list">
-                                        <li><span>Basic Healthcare Platform</span><strong>$45,000 - $75,000</strong></li>
-                                        <li><span>Enterprise HIPAA-Compliant Platform</span><strong>$120,000 - $180,000</strong></li>
-                                        <li><span>AI-Accelerated Enterprise Development</span><strong>$30,000 - $45,000</strong></li>
-                                        <li><span>Development Timeline</span><strong>8-12 weeks vs 32-48 weeks</strong></li>
-                                        <li class="comparison-highlight"><span>Total Client Savings</span><strong>$75,000 - $135,000 + 70% faster delivery</strong></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-actions" style="display: flex; flex-direction: column; gap: 1rem;">
-                                <button onclick="requestDemo('StudyConnectPro', 'StudyConnectPRO - Enterprise HIPAA-Compliant Research Platform')" style="background: #3b82f6; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">📧 Request Demo Access</button>
-                                <div style="padding: 1rem; background: #f3f4f6; border-radius: 6px; text-align: center;">
-                                    <p style="margin: 0; font-size: 0.875rem; color: #6b7280; font-weight: 600;">💼 Available for Purchase or Lease</p>
-                                    <p style="margin: 0.25rem 0 0 0; font-size: 0.75rem; color: #9ca3af;">Enterprise pricing available</p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="portfolio-category">
-                    <div class="category-header">
-                        <span class="category-pill">Luxury &amp; Commerce</span>
-                        <h3 class="category-title">AI-Powered Retail Experiences</h3>
-                        <p class="category-description">
-                            Luxury commerce experiences blend AI valuation, curated storytelling, and glassmorphism aesthetics to differentiate premium retail brands while enabling rapid expansion into additional markets.
-                        </p>
-                    </div>
-                    <div class="category-grid">
-                        <article class="portfolio-card" data-status="development">
-                            <header class="card-header">
-                                <div class="card-top">
-                                    <span class="project-type">Luxury Tropical Consignment Boutique Platform</span>
-                                    <span class="status-pill status-phase">In Development</span>
-                                </div>
-                                <h3 class="card-title">Dana's Palm and Pearl</h3>
-                                <p class="card-subtitle">
-                                    Cutting-edge luxury consignment platform specializing in tropical resort fashion. Inspired by "Lilly Pulitzer meets Balmain Resort meets Apple.com 2025," featuring Destination Closet&trade; capsules, AI-powered valuation, and immersive ambient design.
-                                </p>
-                            </header>
-                            <div class="card-body">
-                                <div class="card-section">
-                                    <h4>Technical Architecture</h4>
-                                    <div class="detail-grid">
-                                        <div class="detail-group">
-                                            <h5>Next.js 16 Stack</h5>
-                                            <ul class="simple-list">
-                                                <li>Next.js 16 App Router + Turbopack</li>
-                                                <li>TypeScript 5 with full coverage</li>
-                                                <li>Tailwind CSS v4 custom system</li>
-                                                <li>Framer Motion 12 with 60+ variants</li>
-                                            </ul>
-                                        </div>
-                                        <div class="detail-group">
-                                            <h5>AI-Powered Features</h5>
-                                            <ul class="simple-list">
-                                                <li>Smart recommendation engine</li>
-                                                <li>Instant price valuation API</li>
-                                                <li>Liquidity scoring algorithm</li>
-                                                <li>Complementary item matching</li>
-                                            </ul>
-                                        </div>
-                                        <div class="detail-group">
-                                            <h5>Luxury Design System</h5>
-                                            <ul class="simple-list">
-                                                <li>Glassmorphism with depth &amp; blur</li>
-                                                <li>Neon gradient palette (cyan to purple to pink)</li>
-                                                <li>Ambient floating backgrounds</li>
-                                                <li>Luxury minimalist typography</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-section">
-                                    <h4>Innovative Features</h4>
-                                    <ul class="feature-list">
-                                        <li><span class="check-icon">✓</span>Destination Closet&trade; travel capsules</li>
-                                        <li><span class="check-icon">✓</span>AI smart valuation with time-to-sell prediction</li>
-                                        <li><span class="check-icon">✓</span>"Complete the Look" intelligent matching</li>
-                                        <li><span class="check-icon">✓</span>20+ production pages with SEO optimization</li>
-                                        <li><span class="check-icon">✓</span>Interactive API demo &amp; testing platform</li>
-                                        <li><span class="check-icon">✓</span>Curated luxury brands (Lilly Pulitzer, Zimmermann, Tory Burch)</li>
-                                    </ul>
-                                </div>
-                                <div class="card-section value-section">
-                                    <h4>Development &amp; Value Comparison</h4>
-                                    <ul class="comparison-list">
-                                        <li><span>Basic E-commerce Platform</span><strong>$15,000 - $25,000</strong></li>
-                                        <li><span>Luxury E-commerce with AI Features</span><strong>$45,000 - $80,000</strong></li>
-                                        <li><span>AI-Accelerated Development</span><strong>$12,000 - $18,000</strong></li>
-                                        <li><span>Development Timeline</span><strong>6-8 weeks vs 18-24 weeks</strong></li>
-                                        <li class="comparison-highlight"><span>Total Client Savings</span><strong>$27,000 - $62,000 + 70% faster delivery</strong></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-actions" style="display: flex; flex-direction: column; gap: 1rem;">
-                                <button onclick="requestDemo('DanaPalmPearl', 'Dana&rsquo;s Palm and Pearl - Luxury Tropical Consignment Boutique')" style="background: #3b82f6; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">📧 Request Demo Access</button>
-                                <div style="padding: 1rem; background: #f3f4f6; border-radius: 6px; text-align: center;">
-                                    <p style="margin: 0; font-size: 0.875rem; color: #6b7280; font-weight: 600;">💼 Available for Purchase or Lease</p>
-                                    <p style="margin: 0.25rem 0 0 0; font-size: 0.75rem; color: #9ca3af;">Luxury e-commerce platform licensing</p>
-                                </div>
-                            </div>
-                            <p class="card-note">
-                                Unique market position: first luxury consignment platform with destination-driven shopping and AI-powered valuation, delivering innovative APIs competitors do not offer.
-                            </p>
-                        </article>
-                    </div>
+                    <p>You’re not paying for a “big agency experience.” You’re paying for fast, excellent software.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing" style="padding: 6rem 0; background: var(--light-slate);">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Transparent Pricing</div>
-                <h2 class="section-title">Honest. Fast. High-Quality.</h2>
-                <p class="section-description">
-                    <strong>Human-led. AI-accelerated.</strong> development means faster delivery and better value for you.
-                </p>
+        <section class="section features">
+            <div class="shell features-grid reveal">
+                <article class="feature-card">
+                    <h3>Instant feedback loops</h3>
+                    <p>Live previews and instrumentation let you gather stakeholder and user feedback every sprint.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Industry-agnostic</h3>
+                    <p>Healthcare, entertainment, real estate, ecommerce—each gets reusable flows, data models, and consent packs.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Transparent pricing</h3>
+                    <p>Line items show how automation and focus time collapse effort so you can reallocate budget to growth.</p>
+                </article>
             </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <!-- Starter -->
-                <div style="background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 2rem; position: relative;">
-                    <div style="background: var(--gray-600); color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; display: inline-block; margin-bottom: 1.5rem;">STARTER</div>
-                    <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark-slate); margin-bottom: 0.5rem;">Starter Site</h3>
-                    <div style="font-size: 2rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 0.5rem;">$1,200 – $2,000</div>
-                    <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Perfect for getting online fast</p>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> 1–3 pages (Bio/About, Contact)</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Mobile-first design</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Streaming/booking links or business CTA</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Basic SEO setup</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Social media integration</li>
-                    </ul>
-                    <div style="background: var(--primary-blue); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-align: center; font-weight: 600;">5-7 days</div>
-                </div>
+        </section>
 
-                <!-- Pro -->
-                <div style="background: white; border: 2px solid var(--primary-blue); border-radius: 12px; padding: 2rem; position: relative; transform: scale(1.05);">
-                    <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary-blue); color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600;">MOST POPULAR</div>
-                    <div style="background: var(--primary-blue); color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; display: inline-block; margin: 1rem 0 1.5rem 0;">PRO</div>
-                    <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark-slate); margin-bottom: 0.5rem;">Pro Artist / Business Presence</h3>
-                    <div style="font-size: 2rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 0.5rem;">$2,500 – $4,000</div>
-                    <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Complete professional presence</p>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> 4–7 pages with full content</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> EPK/media kit or services catalog</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Gallery + social + merch/store links</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Email capture (newsletter or booking)</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Analytics + SEO setup</li>
-                    </ul>
-                    <div style="background: var(--primary-blue); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-align: center; font-weight: 600;">10-14 days</div>
+        <section class="section promise">
+            <div class="shell reveal">
+                <div class="section-header">
+                    <p class="eyebrow">Our promise</p>
+                    <h2>Enterprise quality. Startup speed. Boutique focus.</h2>
                 </div>
+                <ul class="promise-list">
+                    <li>Transparent pricing and zero waste.</li>
+                    <li>Future-proof, maintainable code with clean UX and professional UI.</li>
+                    <li>Optional HIPAA/FERPA-ready patterns baked into every engagement.</li>
+                    <li>Clear platform ownership, runbooks, and support paths handed to you at the end.</li>
+                    <li>We’re here to save you months of work and tens of thousands of dollars.</li>
+                </ul>
+            </div>
+        </section>
 
-                <!-- App Design -->
-                <div style="background: white; border: 1px solid #8b5cf6; border-radius: 12px; padding: 2rem; position: relative;">
-                    <div style="background: #8b5cf6; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; display: inline-block; margin-bottom: 1.5rem;">APP DESIGN</div>
-                    <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark-slate); margin-bottom: 0.5rem;">Enterprise Mobile App Design</h3>
-                    <div style="font-size: 2rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 0.5rem;">$8,500 – $15,000</div>
-                    <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Professional app design & strategy</p>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Complete UX research & strategy</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> iOS & Android design systems</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Interactive prototypes & testing</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Enterprise-grade design documentation</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Development-ready assets & specs</li>
-                    </ul>
-                    <div style="background: #8b5cf6; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-align: center; font-weight: 600;">4-6 weeks</div>
+        <section id="contact" class="section contact">
+            <div class="shell contact-card reveal">
+                <div>
+                    <p class="eyebrow">Let’s build</p>
+                    <h2>Tell us what you're trying to launch. We'll tell you how fast and how cost-effective it can be.</h2>
+                    <p>Email <a href="mailto:tech@webconnect360.com">tech@webconnect360.com</a> with a quick brief—industry, audience, compliance needs, and timeline. We’ll reply with a scoped pilot, budget, and preview cadence.</p>
                 </div>
-
-                <!-- Enterprise -->
-                <div style="background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 2rem; position: relative;">
-                    <div style="background: var(--dark-slate); color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; display: inline-block; margin-bottom: 1.5rem;">ENTERPRISE</div>
-                    <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark-slate); margin-bottom: 0.5rem;">Custom Application</h3>
-                    <div style="font-size: 2rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 0.5rem;">$5,000+</div>
-                    <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Full-scale web applications</p>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Custom functionality & databases</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> User authentication & admin panels</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> API integrations & automation</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Scalable cloud deployment</li>
-                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--gray-600);"><span style="color: var(--primary-blue);">✓</span> Ongoing support & maintenance</li>
-                    </ul>
-                    <div style="background: var(--dark-slate); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-align: center; font-weight: 600;">3-8 weeks</div>
+                <div class="contact-actions">
+                    <a class="btn primary" href="mailto:tech@webconnect360.com">Request demo</a>
+                    <a class="btn outline" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn placeholder</a>
+                    <button class="btn ghost" type="button" disabled>Docs coming soon</button>
+                </div>
+                <div class="compliance-stack" role="note">
+                    <div class="compliance-badges">
+                        <span class="compliance-badge">HIPAA-ready</span>
+                        <span class="compliance-badge">FERPA-conscious</span>
+                        <span class="compliance-badge">SOC 2 patterns</span>
+                        <span class="compliance-badge">Medical director optional</span>
+                    </div>
+                    <p class="disclaimer">WebConnect360 is not a medical provider. Products are educational + operational tools that require licensed medical oversight before patient care. PHI capture is disabled until BAAs, consents, and security reviews are complete.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Work Order Section -->
-    <section class="work-order" id="contact">
-        <div class="container">
-            <div class="work-order-wrapper">
-                <div class="work-order-header">
-                    <h2 class="work-order-title">Start Your Project</h2>
-                    <p class="work-order-description">Tell us about your project and we'll get back to you within 24 hours.</p>
-                </div>
-                <form class="work-order-form" action="https://formsubmit.co/tech@webconnect360.com" method="POST">
-                    <input type="hidden" name="_subject" value="New WebConnect360 Project Inquiry">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="client-name" class="form-label">Your Name <span class="required">*</span></label>
-                            <input type="text" id="client-name" name="client_name" class="form-input" placeholder="Jane Smith" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="client-email" class="form-label">Email Address <span class="required">*</span></label>
-                            <input type="email" id="client-email" name="client_email" class="form-input" placeholder="you@company.com" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="client-company" class="form-label">Company/Organization</label>
-                            <input type="text" id="client-company" name="client_company" class="form-input" placeholder="Company or organization name">
-                        </div>
-                        <div class="form-group">
-                            <label for="client-phone" class="form-label">Phone Number</label>
-                            <input type="tel" id="client-phone" name="client_phone" class="form-input" placeholder="(555) 123-4567">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group full">
-                            <label for="project-name" class="form-label">Project Name <span class="required">*</span></label>
-                            <input type="text" id="project-name" name="project_name" class="form-input" placeholder="Project codename" required>
-                            <span class="helper-text">What would you like to call your project?</span>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="project-type" class="form-label">Project Type <span class="required">*</span></label>
-                            <select id="project-type" name="project_type" class="form-select" required>
-                                <option value="" disabled selected>Select a project type</option>
-                                <option>Enterprise Technical Platform</option>
-                                <option>Healthcare / Clinical Platform</option>
-                                <option>Education / Training Platform</option>
-                                <option>Marketing Website / Rebrand</option>
-                                <option>E-commerce / Payments</option>
-                                <option>Custom Web Application</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="budget-range" class="form-label">Budget Range <span class="required">*</span></label>
-                            <select id="budget-range" name="budget_range" class="form-select" required>
-                                <option value="" disabled selected>Select a budget range</option>
-                                <option>$3,000 – $6,000</option>
-                                <option>$6,000 – $10,000</option>
-                                <option>$10,000 – $20,000</option>
-                                <option>$20,000 – $35,000</option>
-                                <option>$35,000 – $50,000</option>
-                                <option>$50,000+</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="launch-date" class="form-label">Target Launch Date</label>
-                            <input type="date" id="launch-date" name="target_launch_date" class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="referral" class="form-label">How did you hear about WebConnect360?</label>
-                            <input type="text" id="referral" name="referral_source" class="form-input" placeholder="Referral, search, conference, etc.">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group full">
-                            <label for="project-description" class="form-label">Project Description <span class="required">*</span></label>
-                            <textarea id="project-description" name="project_description" class="form-textarea" placeholder="Describe the goals, users, and functionality you need." required></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group full">
-                            <label for="special-requirements" class="form-label">Special Requirements</label>
-                            <textarea id="special-requirements" name="special_requirements" class="form-textarea" placeholder="Compliance, integrations, data handling, design directives, etc."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="consent-group">
-                        <input type="checkbox" id="contact-consent" name="contact_consent" required>
-                        <label for="contact-consent">I consent to be contacted about my project <span class="required">*</span></label>
-                    </div>
-
-                    <div class="form-actions">
-                        <button type="submit" class="work-order-button">
-                            Submit Project Inquiry
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </form>
+    <footer class="site-footer">
+        <div class="shell footer-grid">
+            <div>
+                <span class="brand-icon">⚡</span>
+                <p>WebConnect360 blends modern tooling with human EMS experience to ship faster than traditional agencies.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Support Section -->
-    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 0;">
-        <div class="container">
-            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">☕️</div>
-                <h2 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem;">Enjoying the work?</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; line-height: 1.6;">
-                    If these platforms and demos have been helpful for your projects, consider buying me a coffee! 
-                    Your support helps me continue building innovative solutions and sharing them with the community.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <button onclick="donate('coffee')" style="background: #ff813f; color: white; padding: 1rem 2rem; border: none; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 1rem; transition: transform 0.2s ease, box-shadow 0.2s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
-                        ☕️ Buy Me a Coffee - $5
-                    </button>
-                    <button onclick="donate('support')" style="background: #28a745; color: white; padding: 1rem 2rem; border: none; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 1rem; transition: transform 0.2s ease, box-shadow 0.2s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
-                        💚 Support the Work - $25
-                    </button>
-                </div>
-                <p style="font-size: 0.9rem; margin-top: 1.5rem; opacity: 0.8;">
-                    🙏 Every coffee helps fuel late-night coding sessions and new platform development!
-                </p>
+            <div class="footer-links">
+                <a href="mailto:tech@webconnect360.com">tech@webconnect360.com</a>
+                <a href="#platforms" data-scroll>View platforms</a>
+                <a href="#value" data-scroll>Cost & value</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-text">&copy; 2025 WebConnect360. Professional technical services by Shaun Williamson.</p>
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // PromedixEMS Payment Functions
-        function purchasePromedix(type) {
-            // Collect user email for payment processing
-            const userEmail = prompt('Enter your email for payment confirmation:');
-            if (!userEmail || !validateEmail(userEmail)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            if (type === 'monthly') {
-                // Create email for monthly subscription
-                const subject = 'PromedixEMS Monthly Subscription - $14.99/month';
-                const body = `Hello,
-
-I would like to purchase a monthly subscription to PromedixEMS for $14.99/month.
-
-My email: ${userEmail}
-Payment type: Monthly Subscription
-Price: $14.99/month
-
-Please send me the Stripe payment link to complete my purchase.
-
-Thank you!`;
-
-                window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                alert('Payment request sent! You will receive a secure Stripe payment link within 1 hour.\n\nNote: This will be more expensive on App Store/Google Play!');
-                
-            } else if (type === 'lifetime') {
-                // Create email for one-time purchase
-                const subject = 'PromedixEMS Lifetime Purchase - $69.99';
-                const body = `Hello,
-
-I would like to purchase PromedixEMS with lifetime access for $69.99.
-
-My email: ${userEmail}
-Payment type: One-time Purchase
-Price: $69.99 (lifetime)
-
-Please send me the Stripe payment link to complete my purchase.
-
-Thank you!`;
-
-                window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                alert('Payment request sent! You will receive a secure Stripe payment link within 1 hour.\n\nNote: This will be more expensive on App Store/Google Play!');
-            }
-        }
-
-        // Demo Request Function
-        function requestDemo(platform, platformFullName) {
-            const userEmail = prompt(`Request Demo Access for ${platformFullName}\n\nPlease enter your email address to receive demo access:`);
-            
-            if (userEmail && validateEmail(userEmail)) {
-                // Create mailto link for demo request
-                const subject = `Demo Request: ${platformFullName}`;
-                const body = `Hello,
-
-I would like to request demo access for: ${platformFullName}
-
-My contact information:
-Email: ${userEmail}
-Platform: ${platform}
-
-Please provide me with demo access credentials.
-
-Thank you,
-${userEmail}`;
-
-                const mailtoLink = `mailto:tech@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                window.location.href = mailtoLink;
-                
-                // Show confirmation message
-                setTimeout(() => {
-                    alert(`Demo request sent for ${platformFullName}!\n\nYou should receive demo access within 24 hours at: ${userEmail}\n\nCheck your email for instructions.`);
-                }, 100);
-            } else if (userEmail) {
-                alert('Please enter a valid email address.');
-                requestDemo(platform, platformFullName); // Retry
-            }
-        }
-
-        function validateEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-
-        // Donation Functions
-        function donate(type) {
-            const userEmail = prompt('Enter your email for donation confirmation:');
-            if (!userEmail || !validateEmail(userEmail)) {
-                alert('Please enter a valid email address to proceed with donation.');
-                return;
-            }
-
-            if (type === 'coffee') {
-                // $5 Buy Me a Coffee donation
-                const subject = '☕️ Buy Me a Coffee - $5 Donation';
-                const body = `Hello Shaun,
-
-I'd like to buy you a coffee to support your work! 
-
-My email: ${userEmail}
-Donation amount: $5
-Type: Coffee Support
-
-Please send me the payment link.
-
-Thanks for all the amazing platforms and demos!
-${userEmail}`;
-
-                window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                alert('Thank you so much! ☕️\n\nYour coffee support means a lot. You\'ll receive a payment link shortly.');
-
-            } else if (type === 'support') {
-                // $25 Support donation
-                const subject = '💚 Platform Support - $25 Donation';
-                const body = `Hello Shaun,
-
-I'd like to support your platform development work!
-
-My email: ${userEmail}
-Donation amount: $25
-Type: Platform Development Support
-
-Please send me the payment link.
-
-Keep up the fantastic work!
-${userEmail}`;
-
-                window.location.href = `mailto:payments@webconnect360.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                alert('Thank you for your generous support! 💚\n\nYour contribution helps fund new platform development. You\'ll receive a payment link shortly.');
-            }
-        }
-
-    </script>
-
-    <!-- External JavaScript -->
-    <script src="components/card-component.js"></script>
-    <script src="script-new.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
