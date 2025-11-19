@@ -145,7 +145,8 @@ python -m http.server 8080
 ├── styles-new.css      # Modern styling system
 ├── script-new.js       # Interactive functionality
 ├── netlify.toml        # Deployment configuration
-└── webconnectlogo.png  # Brand assets
+├── public/             # Logos, marketing images, video assets
+└── webconnectlogo.png  # Legacy brand asset (relocated as needed)
 ```
 
 ---

@@ -12,13 +12,17 @@
             article.setAttribute('data-suite', card.suite || 'ProMedixEMS');
 
             const statusClass = card.statusClass || (card.status ? card.status.toLowerCase().replace(/\s+/g, '-') : 'live');
+            const logoMarkup = card.logo ? `<img src="${card.logo}" alt="${card.logoAlt || `${card.name} logo`}" class="product-card-logo" loading="lazy">` : '';
 
             article.innerHTML = `
                 <div class="card-head">
-                    <div>
-                        <p class="eyebrow">${card.suite || 'ProMedixEMS™'}</p>
-                        <h3>${card.name}</h3>
-                        <p class="card-tagline">${card.tagline}</p>
+                    <div class="card-head-content">
+                        ${logoMarkup}
+                        <div class="card-head-text">
+                            <p class="eyebrow">${card.suite || 'ProMedixEMS™'}</p>
+                            <h3>${card.name}</h3>
+                            <p class="card-tagline">${card.tagline}</p>
+                        </div>
                     </div>
                     <span class="status ${statusClass}">${card.status || 'Live'}</span>
                 </div>

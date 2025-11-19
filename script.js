@@ -1,39 +1,65 @@
 const platformData = [
     {
         name: 'ProMedixEMS™ · EMT-B Core',
-        description: 'Live EMT-B curriculum anchoring the EMT/AEMT/Paramedic suite shipping to both app stores in 2026.',
-        status: 'App Store + Google Play prep · 2026',
-        statusClass: 'status-in-development',
-        tags: ['Adaptive learning', 'Instructor dashboards'],
+        description: 'Covers full EMT-B competency: assessment, BLS skills, oxygen therapy, fundamentals of pharmacology, and realistic entry-level scenarios. Anchors the entire EMT/AEMT/Paramedic suite releasing to both stores in 2026.',
+        status: 'APP STORE + GOOGLE PLAY · 2026',
+        statusClass: 'status-coming',
+        tags: ['Adaptive learning paths', 'Instructor & cohort dashboards'],
         learn: '#',
         demo: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%20Core'
     },
     {
-        name: 'ProMedixEMS™ · Flashcards',
-        description: 'Adaptive flashcards with spaced repetition and AI-authored distractors for on-shift drilling.',
-        status: 'In Development · Internal builds',
+        name: '⚡ FlashLearn™',
+        description: 'A next-generation flashcard system built for EMS mastery with spaced repetition, smart distractors, custom decks, and deep integration with the ProMedixEMS curriculum.',
+        status: 'IN DEVELOPMENT · APP STORE + GOOGLE PLAY 2026',
         statusClass: 'status-in-development',
-        tags: ['Spaced repetition', 'Offline-ready'],
+        tags: ['Spaced repetition system', 'Custom decks & sync'],
+        logo: 'public/logos/flashlearn.svg',
+        logoAlt: 'FlashLearn logo',
         learn: '#',
-        demo: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%20Flashcards',
+        demo: 'mailto:tech@webconnect360.com?subject=FlashLearn%20Waitlist',
+        ctaLabel: 'Join waitlist'
+    },
+    {
+        name: 'MedicationsX™',
+        description: 'A complete EMS pharmacology companion with level-specific formularies, OTC interaction alerts, contraindication intelligence, and a smart medication-math engine.',
+        status: 'IN DEVELOPMENT · APP STORE + GOOGLE PLAY 2026',
+        statusClass: 'status-in-development',
+        tags: ['Level-specific EMS formularies', 'Interaction & contraindication engine'],
+        logo: 'public/logos/medicationsx.svg',
+        logoAlt: 'MedicationsX logo',
+        learn: '#',
+        demo: 'mailto:tech@webconnect360.com?subject=MedicationsX%20Waitlist',
+        ctaLabel: 'Join waitlist'
+    },
+    {
+        name: '📈 RhythmLab™',
+        description: 'A modern, high-clarity rhythm trainer that teaches recognition, patterns, and clinical significance through clean visuals, adaptive quizzing, and progressive difficulty.',
+        status: 'IN DEVELOPMENT · APP STORE + GOOGLE PLAY 2026',
+        statusClass: 'status-in-development',
+        tags: ['Rhythm recognition engine', 'Adaptive ECG drills'],
+        logo: 'public/logos/rhythmlab.svg',
+        logoAlt: 'RhythmLab logo',
+        learn: '#',
+        demo: 'mailto:tech@webconnect360.com?subject=RhythmLab%20Waitlist',
         ctaLabel: 'Join waitlist'
     },
     {
         name: 'ProMedixEMS™ · AEMT',
-        description: 'Bridge program with scenario engines and competency tracking for crews leveling up to AEMT.',
-        status: 'In Development · Internal builds',
+        description: 'Covers IV/IO access, fluid therapy, intermediate pharmacology, airway adjuncts, and scenario-based decision-making designed for crews advancing into advanced practice.',
+        status: 'IN DEVELOPMENT · INTERNAL BUILDS',
         statusClass: 'status-in-development',
-        tags: ['Scenario labs', 'Competency matrix'],
+        tags: ['Scenario labs', 'Competency matrix tracking'],
         learn: '#',
         demo: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%20AEMT',
         ctaLabel: 'Join waitlist'
     },
     {
         name: 'ProMedixEMS™ · Paramedic',
-        description: 'Capstone coursework with telemetry integrations and preceptor workflows for paramedic candidates.',
-        status: 'In Development · Internal builds',
+        description: 'Includes 12-lead ECG interpretation, advanced airways, ALS medications, infusion management, and high-stakes scenarios that support paramedic candidates through capstone and preceptor workflows.',
+        status: 'IN DEVELOPMENT · INTERNAL BUILDS',
         statusClass: 'status-in-development',
-        tags: ['Telemetry-ready', 'Preceptor view'],
+        tags: ['Telemetry-ready modules', 'Preceptor tools & ALS algorithms'],
         learn: '#',
         demo: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%20Paramedic',
         ctaLabel: 'Join waitlist'
@@ -41,7 +67,7 @@ const platformData = [
     {
         name: 'ProMedixEMS™ · PCR Practice',
         description: 'Standalone documentation lab for rehearsing ePCR workflows with NFC equipment tagging.',
-        status: 'In Development · Internal builds',
+        status: 'IN DEVELOPMENT · INTERNAL BUILDS',
         statusClass: 'status-in-development',
         tags: ['Tablet-first', 'QA scoring'],
         learn: '#',
@@ -51,7 +77,7 @@ const platformData = [
     {
         name: 'ProMedix VoiceNotes™',
         description: 'Hands-free capture with AI summaries evolving into a secure, standalone voice platform.',
-        status: 'In Development · Internal builds',
+        status: 'IN DEVELOPMENT · INTERNAL BUILDS',
         statusClass: 'status-in-development',
         tags: ['AI summaries', 'Vault storage'],
         learn: '#',
@@ -60,19 +86,23 @@ const platformData = [
     },
     {
         name: 'StudyConnect™',
-        description: 'Crew coordination and staffing intelligence that pairs EMT availability with dispatch-ready rosters.',
-        status: 'In Development',
-        statusClass: 'status-in-development',
-        tags: ['Scheduling', 'Roster AI'],
+        description: 'Frictionless pre-screening across any clinical, research, or operational workflow. 60-second interest capture without PHI, automatically routing qualified participants or leads into secure pipelines.',
+        status: 'PRODUCTION READY · LIVE DEMOS',
+        statusClass: 'status-live',
+        tags: ['Smart scheduling', 'Roster & lead intelligence'],
+        logo: 'public/logos/StudyConnectlogo.png',
+        logoAlt: 'StudyConnect logo',
         learn: '#',
         demo: 'mailto:tech@webconnect360.com?subject=StudyConnect'
     },
     {
         name: 'StudyConnectPro™',
-        description: 'HIPAA-compliant recruiting OS for dental + medical trials with sponsor messaging and coordinator tools.',
-        status: 'In Development',
-        statusClass: 'status-in-development',
-        tags: ['Workflow routing', 'Audit-ready'],
+        description: 'A HIPAA-compliant backend for research coordinators, clinics, and enterprise programs. Automates eligibility scoring, consent workflows, PHI handling, messaging, and audit logs across medical, dental, and general research operations.',
+        status: 'PRODUCTION READY · LIVE DEMOS',
+        statusClass: 'status-live',
+        tags: ['Workflow routing engine', 'Audit-ready infrastructure'],
+        logo: 'public/logos/StudyConnectPrologo.png',
+        logoAlt: 'StudyConnectPro logo',
         learn: '#',
         demo: 'mailto:tech@webconnect360.com?subject=StudyConnectPro'
     }
@@ -101,6 +131,26 @@ function renderPlatforms() {
 
         const heading = document.createElement('h3');
         heading.textContent = platform.name;
+
+        if (platform.logo) {
+            const header = document.createElement('div');
+            header.className = 'platform-card-header';
+
+            const logo = document.createElement('img');
+            logo.src = platform.logo;
+            logo.alt = platform.logoAlt || `${platform.name} logo`;
+            logo.className = 'platform-card-logo';
+            logo.loading = 'lazy';
+
+            const titleWrap = document.createElement('div');
+            titleWrap.className = 'platform-card-title';
+            titleWrap.appendChild(heading);
+
+            header.append(logo, titleWrap);
+            card.appendChild(header);
+        } else {
+            card.appendChild(heading);
+        }
 
         const desc = document.createElement('p');
         desc.textContent = platform.description;

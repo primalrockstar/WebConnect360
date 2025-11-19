@@ -1,0 +1,21 @@
+<svg width="560" height="160" viewBox="0 0 560 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flashGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6EE7FF" />
+      <stop offset="50%" stop-color="#7A5CFF" />
+      <stop offset="100%" stop-color="#FFB347" />
+    </linearGradient>
+    <linearGradient id="boltGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE066" />
+      <stop offset="100%" stop-color="#FF8F3D" />
+    </linearGradient>
+    <style>
+      .label { font-family: 'Helvetica Neue', 'Inter', 'Segoe UI', sans-serif; font-weight: 700; font-size: 70px; fill: #0F2858; }
+    </style>
+  </defs>
+  <g transform="translate(20,16)">
+    <rect width="140" height="128" rx="32" fill="url(#flashGradient)" />
+    <path d="M72 18 L50 72 H82 L68 126 L110 60 H78 L92 18 Z" fill="url(#boltGradient)" />
+  </g>
+  <text class="label" x="200" y="108">FlashLearn™</text>
+</svg>
