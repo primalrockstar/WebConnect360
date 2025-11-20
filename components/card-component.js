@@ -13,11 +13,15 @@
 
             const statusClass = card.statusClass || (card.status ? card.status.toLowerCase().replace(/\s+/g, '-') : 'live');
             const logoMarkup = card.logo ? `<img src="${card.logo}" alt="${card.logoAlt || `${card.name} logo`}" class="product-card-logo" loading="lazy">` : '';
+            const brandClass = card.brandVariant ? ` product-card-brand--${card.brandVariant}` : '';
+            const brandMarkup = card.brandText ? `<span class="product-card-brand${brandClass}">${card.brandText}</span>` : '';
+            const mediaMarkup = card.media?.src ? `<img src="${card.media.src}" alt="${card.media.alt || `${card.name} showcase`}" class="product-card-media" loading="lazy">` : '';
+            const leadingMarkup = `${logoMarkup}${brandMarkup}`;
 
             article.innerHTML = `
                 <div class="card-head">
                     <div class="card-head-content">
-                        ${logoMarkup}
+                        ${leadingMarkup}
                         <div class="card-head-text">
                             <p class="eyebrow">${card.suite || 'ProMedixEMS™'}</p>
                             <h3>${card.name}</h3>
@@ -27,6 +31,7 @@
                     <span class="status ${statusClass}">${card.status || 'Live'}</span>
                 </div>
                 <p class="card-description">${card.description}</p>
+                ${mediaMarkup}
                 <ul class="card-highlights">
                     ${(card.highlights || []).map(point => `<li>${point}</li>`).join('')}
                 </ul>

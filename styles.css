@@ -420,6 +420,41 @@ a {
     color: var(--muted);
 }
 
+.text-logo-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 220px;
+}
+
+.text-logo-mark {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: linear-gradient(120deg, #4ecdc4, #5edfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-logo-tagline {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+}
+
+.logo-copy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.logo-copy strong {
+    color: #fff;
+}
+
 .partner-logo {
     max-width: 220px;
     width: 100%;
@@ -440,6 +475,281 @@ a {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.spotlight {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(120, 121, 255, 0.15), transparent 50%),
+        radial-gradient(circle at 90% 15%, rgba(255, 107, 53, 0.12), transparent 45%),
+        linear-gradient(180deg, rgba(3, 8, 20, 0.98), rgba(3, 5, 12, 0.95));
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight::before,
+.spotlight::after {
+    content: '';
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.06), transparent 65%);
+    filter: blur(25px);
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.spotlight::before { top: -180px; right: -120px; }
+.spotlight::after { bottom: -220px; left: -140px; }
+
+.spotlight .shell { position: relative; z-index: 1; }
+
+.spotlight-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.spotlight-header p {
+    max-width: 520px;
+    color: var(--muted);
+}
+
+.spotlight-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.spotlight-card {
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(4, 8, 18, 0.95);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.55);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 480px;
+    isolation: isolate;
+}
+
+.spotlight-content {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.spotlight-emblem {
+    font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    align-self: flex-start;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: linear-gradient(120deg, rgba(255,255,255,0.18), rgba(255,255,255,0.02));
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+.spotlight-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.spotlight-badge {
+    padding: 0.25rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.04);
+}
+
+.spotlight-status {
+    padding: 0.25rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.75);
+    border: 1px dashed rgba(255,255,255,0.25);
+}
+
+.spotlight-content h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.spotlight-tagline {
+    margin: 0;
+    font-weight: 600;
+    color: var(--accent-2);
+}
+
+.spotlight-description {
+    margin: 0;
+    color: var(--muted);
+}
+
+.spotlight-highlights {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: grid;
+    gap: 0.35rem;
+}
+
+.spotlight-highlights li {
+    position: relative;
+    padding-left: 1.2rem;
+    color: rgba(255,255,255,0.85);
+}
+
+.spotlight-highlights li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.7;
+    position: absolute;
+    left: 0;
+    top: 0.45rem;
+}
+
+.spotlight-card .btn {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
+.spotlight-card {
+    border-color: color-mix(in srgb, var(--spotlight-accent, var(--accent)) 25%, rgba(255,255,255,0.15));
+}
+
+.spotlight-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid rgba(255,255,255,0.08);
+    pointer-events: none;
+}
+
+.moodboard {
+    background: radial-gradient(circle at 20% 20%, rgba(78,205,196,0.12), transparent 45%),
+        radial-gradient(circle at 80% 0%, rgba(255,107,53,0.12), transparent 40%),
+        linear-gradient(180deg, rgba(4,10,26,0.95), rgba(2,4,12,0.98));
+    position: relative;
+    overflow: hidden;
+}
+
+.moodboard::before,
+.moodboard::after {
+    content: '';
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
+    filter: blur(20px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.moodboard::before { top: -120px; left: -60px; }
+.moodboard::after { bottom: -160px; right: -80px; }
+
+.moodboard .shell { position: relative; z-index: 1; }
+
+.moodboard-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+
+.mood-card {
+    --mood-accent: var(--accent-2);
+    border-radius: var(--radius-lg);
+    border: 1px solid color-mix(in srgb, var(--mood-accent) 35%, rgba(255,255,255,0.12));
+    background: rgba(4,9,18,0.85);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mood-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+
+.mood-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.mood-card-body h3 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.mood-card-body p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.mood-category {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: none;
+    color: rgba(255,255,255,0.6);
+}
+
+.mood-tag {
+    align-self: flex-start;
+    padding: 0.25rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: none;
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.05);
+}
+
+.mood-card-sparkline {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.1), var(--mood-accent, var(--accent-2)));
+    border-radius: 999px;
+    opacity: 0.8;
+}
+
+.moodboard-note {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
 }
 
 .platform-card {
@@ -463,6 +773,74 @@ a {
     gap: 1rem;
 }
 
+.platform-brand {
+    font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.18);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(120deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+    color: var(--text);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+.platform-brand::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0.9;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+.platform-brand--promedix {
+    background: linear-gradient(120deg, #ff6b6b, #ffd93d 60%, #4ecdc4);
+    color: #05020c;
+}
+
+.platform-brand--flashlearn {
+    background: linear-gradient(120deg, #c471ed, #f64f59);
+    color: #fff4fb;
+}
+
+.platform-brand--medicationsx {
+    background: linear-gradient(120deg, #48c6ef, #6f86d6);
+}
+
+.platform-brand--rhythm {
+    background: linear-gradient(120deg, #f7971e, #ffd200);
+    color: #1b0a00;
+}
+
+.platform-brand--studyconnect,
+.platform-brand--studyconnectpro {
+    background: linear-gradient(120deg, #7f7fd5, #86a8e7, #91eae4);
+    color: #04010b;
+}
+
+.platform-brand--pcrwriter {
+    background: linear-gradient(120deg, #ff8c68, #f9d423);
+    color: #1b0900;
+}
+
+.platform-brand--voicenotes {
+    background: linear-gradient(120deg, #4158d0, #c850c0, #ffcc70);
+    color: #08020c;
+}
+
+.platform-brand--scenariolab {
+    background: linear-gradient(120deg, #00c6ff, #0072ff);
+    color: #031021;
+}
+
 .platform-card-logo {
     width: 72px;
     max-height: 56px;
@@ -471,10 +849,118 @@ a {
     filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
 }
 
+.platform-card-media {
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.45);
+    margin: 0.25rem 0 0.5rem;
+    background: rgba(4,4,12,0.7);
+    object-fit: cover;
+    max-height: 220px;
+}
+
+.platform-brand {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.03);
+    color: var(--text);
+    line-height: 1;
+}
+
+.platform-brand--promedix {
+    background: linear-gradient(120deg, #ff6b35, #ffd166);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.platform-brand--flashlearn {
+    background: linear-gradient(120deg, #4ecdc4, #1d6ff2);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.platform-brand--medicationsx {
+    background: linear-gradient(120deg, #c471ed, #f64f59);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.platform-brand--rhythm {
+    background: linear-gradient(120deg, #ffd23f, #fb5607);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.platform-brand--studyconnect {
+    background: linear-gradient(120deg, #7c5dff, #4ecdc4);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.platform-brand--studyconnectpro {
+    background: linear-gradient(120deg, #ff5f6d, #ffc371);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.platform-brand--pcrwriter {
+    background: linear-gradient(120deg, #3a7bd5, #00d2ff);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.platform-brand--voicenotes {
+    background: linear-gradient(120deg, #fddb92, #d1fdff);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.platform-brand--scenariolab {
+    background: linear-gradient(120deg, #4facfe, #00f2fe);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
 .platform-card-title {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+}
+
+.platform-card-media {
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.12);
+    margin: 0.5rem 0 0.25rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.45);
+    object-fit: cover;
 }
 
 .platform-card:hover {
@@ -729,6 +1215,8 @@ a {
 
 .platform-card h3 {
     font-size: 1.25rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
 }
 
 .platform-card p {
@@ -1062,13 +1550,18 @@ a {
     color: var(--muted);
 }
 
-.reveal {
+.no-js .reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.js-ready .reveal {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 500ms ease, transform 500ms ease;
 }
 
-.reveal.visible {
+.js-ready .reveal.visible {
     opacity: 1;
     transform: translateY(0);
 }

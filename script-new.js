@@ -30,141 +30,151 @@ const throttle = (func, limit) => {
 
 // ===== PRODUCT DATA =====
 const productData = {
-        studyConnect: [
-            {
-                name: 'StudyConnect™',
-                suite: 'StudyConnect™',
-                tagline: 'Frictionless pre-screening platform',
-                description: 'Frictionless pre-screening across any clinical, research, or operational workflow. 60-second interest capture without PHI, automatically routing qualified participants or leads into secure pipelines.',
-                highlights: ['Smart scheduling', 'Roster & lead intelligence'],
-                status: 'Production ready · Live demos',
-                statusClass: 'live',
-                stack: 'Netlify · Secure web app',
-                logo: 'public/logos/StudyConnectlogo.png',
-                logoAlt: 'StudyConnect logo',
-                link: 'mailto:tech@webconnect360.com?subject=StudyConnect%20Request&body=Hello%20Shaun%2C%0A%0APlease%20send%20me%20the%20StudyConnect%20preview.%0A%0AThank%20you!',
-                cta: 'Request demo'
-            },
-            {
-                name: 'StudyConnectPro™',
-                suite: 'StudyConnect™',
-                tagline: 'HIPAA backend for coordinators',
-                description: 'A HIPAA-compliant backend for research coordinators, clinics, and enterprise programs. Automates eligibility scoring, consent workflows, PHI handling, messaging, and audit logs across medical, dental, and general research operations.',
-                highlights: ['Workflow routing engine', 'Audit-ready infrastructure'],
-                status: 'Production ready · Live demos',
-                statusClass: 'live',
-                stack: 'React · FastAPI · AWS Shield',
-                logo: 'public/logos/StudyConnectPrologo.png',
-                logoAlt: 'StudyConnectPro logo',
-                link: 'mailto:tech@webconnect360.com?subject=StudyConnectPro%20Request&body=Hello%20Shaun%2C%0A%0APlease%20send%20me%20the%20StudyConnectPro%20demo.%0A%0AThank%20you!',
-                cta: 'Request demo'
-            }
-        ],
-        proMedix: [
-            {
-                name: 'ProMedixEMS™ · EMT-B Core',
-                suite: 'ProMedixEMS™',
-                tagline: 'Foundation of the EMS pathway',
-                description: 'Covers full EMT-B competency: assessment, BLS skills, oxygen therapy, fundamentals of pharmacology, and realistic entry-level scenarios. Anchors the entire EMT/AEMT/Paramedic suite releasing to both stores in 2026.',
-                highlights: ['Adaptive learning paths', 'Instructor & cohort dashboards'],
-                status: 'App Store + Google Play · 2026',
-                statusClass: 'coming',
-                stack: 'React · GraphQL · AWS',
-                link: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%E2%84%A2%20EMT-B%20Request&body=Hello%20Shaun%2C%0A%0ARequesting%20an%20EMT-B%20preview.%0A%0AThank%20you!',
-                cta: 'Request demo'
-            },
-            {
-                name: '⚡ FlashLearn™',
-                suite: 'ProMedixEMS™',
-                tagline: 'Spaced repetition system',
-                description: 'A next-generation flashcard system built for EMS mastery with spaced repetition, smart distractors, custom decks, and deep integration with the ProMedixEMS curriculum.',
-                highlights: ['Spaced repetition system', 'Custom decks & sync'],
-                status: 'In Development · App Store + Google Play 2026',
-                statusClass: 'phase',
-                stack: 'React Native · Expo · SQLite',
-                logo: 'public/logos/flashlearn.svg',
-                logoAlt: 'FlashLearn logo',
-                link: 'mailto:tech@webconnect360.com?subject=FlashLearn%20Waitlist&body=Hello%20Shaun%2C%0A%0AAdd%20me%20to%20the%20FlashLearn%20waitlist.%0A%0AThank%20you!',
-                cta: 'Join waitlist'
-            },
-            {
-                name: 'MedicationsX™',
-                suite: 'ProMedixEMS™',
-                tagline: 'EMS pharmacology companion',
-                description: 'Level-specific formularies, OTC interaction alerts, contraindication intelligence, and a smart medication-math engine designed for EMT through Paramedic providers.',
-                highlights: ['Level-specific formularies', 'Interaction engine'],
-                status: 'In Development · App Store + Google Play 2026',
-                statusClass: 'phase',
-                stack: 'Expo · Secure sync · SQLite',
-                logo: 'public/logos/medicationsx.svg',
-                logoAlt: 'MedicationsX logo',
-                link: 'mailto:tech@webconnect360.com?subject=MedicationsX%20Waitlist&body=Hello%20Shaun%2C%0A%0APlease%20add%20me%20to%20MedicationsX.%0A%0AThank%20you!',
-                cta: 'Join waitlist'
-            },
-            {
-                name: '📈 RhythmLab™',
-                suite: 'ProMedixEMS™',
-                tagline: 'Adaptive rhythm trainer',
-                description: 'High-clarity rhythm training for EMS students and ALS candidates with clean visuals, adaptive quizzing, and progressive difficulty.',
-                highlights: ['Rhythm recognition engine', 'Adaptive ECG drills'],
-                status: 'In Development · App Store + Google Play 2026',
-                statusClass: 'phase',
-                stack: 'Next.js · D3 · Serverless APIs',
-                logo: 'public/logos/rhythmlab.svg',
-                logoAlt: 'RhythmLab logo',
-                link: 'mailto:tech@webconnect360.com?subject=RhythmLab%20Waitlist&body=Hello%20Shaun%2C%0A%0AAdd%20me%20to%20the%20RhythmLab%20waitlist.%0A%0AThank%20you!',
-                cta: 'Join waitlist'
-            },
-            {
-                name: 'ProMedixEMS™ · AEMT',
-                suite: 'ProMedixEMS™',
-                tagline: 'Build on EMT-B with invasive skills',
-                description: 'Covers IV/IO access, fluid therapy, intermediate pharmacology, airway adjuncts, and scenario-based decision-making designed for crews advancing into advanced practice.',
-                highlights: ['Scenario labs', 'Competency matrix tracking'],
-                status: 'In Development · Internal builds',
-                statusClass: 'phase',
-                stack: 'Next.js · Redux · PostgreSQL',
-                link: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%E2%84%A2%20AEMT%20Waitlist&body=Hello%20Shaun%2C%0A%0AAdd%20me%20to%20the%20AEMT%20waitlist.%0A%0AThank%20you!',
-                cta: 'Join waitlist'
-            },
-            {
-                name: 'ProMedixEMS™ · Paramedic',
-                suite: 'ProMedixEMS™',
-                tagline: 'Advanced ALS training suite',
-                description: 'Includes 12-lead ECG interpretation, advanced airways, ALS medications, infusion management, and high-stakes scenarios. Designed to support paramedic candidates through capstone and preceptor workflows.',
-                highlights: ['Telemetry-ready modules', 'Preceptor tools & ALS algorithms'],
-                status: 'In Development · Internal builds',
-                statusClass: 'phase',
-                stack: 'Remix · Prisma · AWS AppSync',
-                link: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%E2%84%A2%20Paramedic%20Waitlist&body=Hello%20Shaun%2C%0A%0AAdd%20me%20to%20the%20Paramedic%20waitlist.%0A%0AThank%20you!',
-                cta: 'Join waitlist'
-            },
-            {
-                name: 'ProMedixEMS™ · PCR Practice',
-                suite: 'ProMedixEMS™',
-                tagline: 'Documentation lab',
-                description: 'Standalone documentation lab for rehearsing ePCR workflows with NFC equipment tagging.',
-                highlights: ['Tablet-first', 'QA scoring'],
-                status: 'In Development · Internal builds',
-                statusClass: 'phase',
-                stack: 'React Native · Realm · Azure',
-                link: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%E2%84%A2%20PCR%20Practice%20Waitlist&body=Hello%20Shaun%2C%0A%0AKeep%20me%20updated%20on%20PCR%20Practice.%0A%0AThank%20you!',
-                cta: 'Join waitlist'
-            },
-            {
-                name: 'ProMedix VoiceNotes™',
-                suite: 'ProMedixEMS™',
-                tagline: 'Hands-free capture',
-                description: 'Hands-free capture with AI summaries evolving into a secure, standalone voice platform.',
-                highlights: ['AI summaries', 'Vault storage'],
-                status: 'In Development · Internal builds',
-                statusClass: 'phase',
-                stack: 'Next.js · Python · OpenAI',
-                link: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%E2%84%A2%20VoiceNotes%20Waitlist&body=Hello%20Shaun%2C%0A%0APlease%20add%20me%20to%20the%20VoiceNotes%20waitlist.%0A%0AThank%20you!',
-                cta: 'Join waitlist'
-            }
-        ]
-    };
+    studyConnect: [
+        {
+            name: 'StudyConnecttm',
+            suite: 'StudyConnecttm',
+            brandText: 'StudyConnect',
+            brandVariant: 'studyconnect',
+            tagline: 'Frictionless pre-screening platform',
+            description: 'Frictionless pre-screening across any clinical, research, or operational workflow. 60-second interest capture without PHI, automatically routing qualified participants or leads into secure pipelines.',
+            highlights: ['Smart scheduling', 'Roster & lead intelligence'],
+            status: 'Production ready · Live demos',
+            statusClass: 'live',
+            stack: 'Netlify · Secure web app',
+            link: 'mailto:tech@webconnect360.com?subject=StudyConnect%20Request&body=Hello%20Shaun%2C%0A%0APlease%20send%20me%20the%20StudyConnect%20preview.%0A%0AThank%20you!',
+            cta: 'Request demo'
+        },
+        {
+            name: 'StudyConnectProtm',
+            suite: 'StudyConnectProtm',
+            brandText: 'StudyConnectPro',
+            brandVariant: 'studyconnectpro',
+            tagline: 'HIPAA backend for coordinators',
+            description: 'A HIPAA-compliant backend for research coordinators, clinics, and enterprise programs. Automates eligibility scoring, consent workflows, PHI handling, messaging, and audit logs across medical, dental, and general research operations.',
+            highlights: ['Workflow routing engine', 'Audit-ready infrastructure'],
+            status: 'Production ready · Live demos',
+            statusClass: 'live',
+            stack: 'React · FastAPI · AWS Shield',
+            link: 'mailto:tech@webconnect360.com?subject=StudyConnectPro%20Request&body=Hello%20Shaun%2C%0A%0APlease%20send%20me%20the%20StudyConnectPro%20demo.%0A%0AThank%20you!',
+            cta: 'Request demo'
+        }
+    ],
+    proMedix: [
+        {
+            name: 'ProMedixEMS™ · EMT-B Core',
+            suite: 'ProMedixEMS™',
+            brandText: 'ProMedixEMS',
+            brandVariant: 'promedix',
+            tagline: 'Foundation of the EMS pathway',
+            description: 'Covers full EMT-B competency: assessment, BLS skills, oxygen therapy, fundamentals of pharmacology, and realistic entry-level scenarios. Anchors the entire EMT/AEMT/Paramedic suite releasing to both stores in 2026.',
+            highlights: ['Adaptive learning paths', 'Instructor & cohort dashboards'],
+            status: 'App Store + Google Play · 2026',
+            statusClass: 'coming',
+            stack: 'React · GraphQL · AWS',
+            link: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%E2%84%A2%20EMT-B%20Request&body=Hello%20Shaun%2C%0A%0ARequesting%20an%20EMT-B%20preview.%0A%0AThank%20you!',
+            cta: 'Request demo'
+        },
+        {
+            name: 'FlashLearnEMStm',
+            suite: 'ProMedixEMS™',
+            brandText: 'FlashLearnEMS',
+            brandVariant: 'flashlearn',
+            tagline: 'Spaced repetition system',
+            description: 'A next-generation flashcard system built for EMS mastery with spaced repetition, smart distractors, custom decks, and deep integration with the ProMedixEMS curriculum.',
+            highlights: ['Spaced repetition system', 'Custom decks & sync'],
+            status: 'In Development · App Store + Google Play 2026',
+            statusClass: 'phase',
+            stack: 'React Native · Expo · SQLite',
+            link: 'mailto:tech@webconnect360.com?subject=FlashLearn%20Waitlist&body=Hello%20Shaun%2C%0A%0AAdd%20me%20to%20the%20FlashLearn%20waitlist.%0A%0AThank%20you!',
+            cta: 'Join waitlist'
+        },
+        {
+            name: 'MedicationsX™',
+            suite: 'ProMedixEMS™',
+            brandText: 'MedicationsX',
+            brandVariant: 'medicationsx',
+            tagline: 'EMS pharmacology companion',
+            description: 'Level-specific formularies, OTC interaction alerts, contraindication intelligence, and a smart medication-math engine designed for EMT through Paramedic providers.',
+            highlights: ['Level-specific formularies', 'Interaction engine'],
+            status: 'In Development · App Store + Google Play 2026',
+            statusClass: 'phase',
+            stack: 'Expo · Secure sync · SQLite',
+            link: 'mailto:tech@webconnect360.com?subject=MedicationsX%20Waitlist&body=Hello%20Shaun%2C%0A%0APlease%20add%20me%20to%20MedicationsX.%0A%0AThank%20you!',
+            cta: 'Join waitlist'
+        },
+        {
+            name: 'RhythmLabEMStm',
+            suite: 'ProMedixEMS™',
+            brandText: 'RhythmLabEMS',
+            brandVariant: 'rhythm',
+            tagline: 'Adaptive rhythm trainer',
+            description: 'High-clarity rhythm training for EMS students and ALS candidates with clean visuals, adaptive quizzing, and progressive difficulty.',
+            highlights: ['Rhythm recognition engine', 'Adaptive ECG drills'],
+            status: 'In Development · App Store + Google Play 2026',
+            statusClass: 'phase',
+            stack: 'Next.js · D3 · Serverless APIs',
+            link: 'mailto:tech@webconnect360.com?subject=RhythmLab%20Waitlist&body=Hello%20Shaun%2C%0A%0AAdd%20me%20to%20the%20RhythmLab%20waitlist.%0A%0AThank%20you!',
+            cta: 'Join waitlist'
+        },
+        {
+            name: 'ProMedixEMS™ · AEMT',
+            suite: 'ProMedixEMS™',
+            brandText: 'ProMedixEMS',
+            brandVariant: 'promedix',
+            tagline: 'Build on EMT-B with invasive skills',
+            description: 'Covers IV/IO access, fluid therapy, intermediate pharmacology, airway adjuncts, and scenario-based decision-making designed for crews advancing into advanced practice.',
+            highlights: ['Scenario labs', 'Competency matrix tracking'],
+            status: 'In Development · Internal builds',
+            statusClass: 'phase',
+            stack: 'Next.js · Redux · PostgreSQL',
+            link: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%E2%84%A2%20AEMT%20Waitlist&body=Hello%20Shaun%2C%0A%0AAdd%20me%20to%20the%20AEMT%20waitlist.%0A%0AThank%20you!',
+            cta: 'Join waitlist'
+        },
+        {
+            name: 'ProMedixEMS™ · Paramedic',
+            suite: 'ProMedixEMS™',
+            brandText: 'ProMedixEMS',
+            brandVariant: 'promedix',
+            tagline: 'Advanced ALS training suite',
+            description: 'Includes 12-lead ECG interpretation, advanced airways, ALS medications, infusion management, and high-stakes scenarios. Designed to support paramedic candidates through capstone and preceptor workflows.',
+            highlights: ['Telemetry-ready modules', 'Preceptor tools & ALS algorithms'],
+            status: 'In Development · Internal builds',
+            statusClass: 'phase',
+            stack: 'Remix · Prisma · AWS AppSync',
+            link: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%E2%84%A2%20Paramedic%20Waitlist&body=Hello%20Shaun%2C%0A%0AAdd%20me%20to%20the%20Paramedic%20waitlist.%0A%0AThank%20you!',
+            cta: 'Join waitlist'
+        },
+        {
+            name: 'PCRWriterEMStm',
+            suite: 'ProMedixEMS™',
+            brandText: 'PCRWriterEMS',
+            brandVariant: 'pcrwriter',
+            tagline: 'Documentation lab',
+            description: 'Standalone documentation lab for rehearsing ePCR workflows with NFC equipment tagging.',
+            highlights: ['Tablet-first', 'QA scoring'],
+            status: 'In Development · Internal builds',
+            statusClass: 'phase',
+            stack: 'React Native · Realm · Azure',
+            link: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%E2%84%A2%20PCR%20Practice%20Waitlist&body=Hello%20Shaun%2C%0A%0AKeep%20me%20updated%20on%20PCR%20Practice.%0A%0AThank%20you!',
+            cta: 'Join waitlist'
+        },
+        {
+            name: 'VoiceNotesEMStm',
+            suite: 'ProMedixEMS™',
+            brandText: 'VoiceNotesEMS',
+            brandVariant: 'voicenotes',
+            tagline: 'Hands-free capture',
+            description: 'Hands-free capture with AI summaries evolving into a secure, standalone voice platform.',
+            highlights: ['AI summaries', 'Vault storage'],
+            status: 'In Development · Internal builds',
+            statusClass: 'phase',
+            stack: 'Next.js · Python · OpenAI',
+            link: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%E2%84%A2%20VoiceNotes%20Waitlist&body=Hello%20Shaun%2C%0A%0APlease%20add%20me%20to%20the%20VoiceNotes%20waitlist.%0A%0AThank%20you!',
+            cta: 'Join waitlist'
+        }
+    ]
+};
 
 // ===== LOADING SCREEN =====
 class LoadingScreen {
