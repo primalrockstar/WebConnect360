@@ -41,8 +41,8 @@ const moodboardShots = [
 
 const productSpotlights = [
     {
-        id: 'flashlearn',
-        brand: 'FlashLearnEMS™',
+        id: 'chapterflash',
+        brand: 'ChapterFlashEMT™',
         suite: 'ProMedixEMS™',
         tagline: 'Spaced repetition OS for EMT cohorts.',
         description: 'Spacing AI personalizes deck order, heatmaps distractors, and syncs progress across crews in seconds.',
@@ -127,15 +127,15 @@ const platformData = [
         ctaLabel: 'Join waitlist'
     },
     {
-        name: 'FlashLearnEMS™',
+        name: 'ChapterFlashEMT™',
         description: 'A next-generation flashcard system built for EMS mastery with spaced repetition, smart distractors, custom decks, and deep integration with the ProMedixEMS curriculum.',
         status: 'IN DEVELOPMENT · APP STORE + GOOGLE PLAY 2026',
         statusClass: 'status-in-development',
         tags: ['Spaced repetition system', 'Custom decks & sync'],
-        brandText: 'FlashLearnEMS™',
-        brandVariant: 'flashlearn',
+        brandText: 'ChapterFlashEMT™',
+        brandVariant: 'chapterflash',
         learn: 'learn-more.html',
-        demo: 'mailto:tech@webconnect360.com?subject=FlashLearnEMS%20Waitlist',
+        demo: 'mailto:tech@webconnect360.com?subject=ChapterFlash%20Waitlist',
         ctaLabel: 'Join waitlist'
     },
     {

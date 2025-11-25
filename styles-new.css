@@ -2566,10 +2566,10 @@ main {
 .product-card-brand { font-family: 'Space Grotesk','Inter',sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.8rem; border-radius: var(--radius-pill); border: 1px solid rgba(255,255,255,0.18); display: inline-flex; align-items: center; gap: 0.35rem; color: var(--brand-light); background: rgba(255,255,255,0.05); box-shadow: 0 4px 12px rgba(0,0,0,0.35); }
 .product-card-brand::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: 0.7; }
 .product-card-brand--promedix { background: linear-gradient(120deg,#ff6b6b,#ffd93d 60%,#4ecdc4); color: #05020c; border-color: transparent; }
-.product-card-brand--flashlearn { background: linear-gradient(120deg,#c471ed,#f64f59); color: #fff4fb; border-color: transparent; }
+.product-card-brand--chapterflash { background: linear-gradient(120deg,#c471ed,#f64f59); color: #fff4fb; border-color: transparent; }
 .product-card-brand--medicationsx { background: linear-gradient(120deg,#48c6ef,#6f86d6); border-color: transparent; }
 .product-card-brand--rhythm { background: linear-gradient(120deg,#f7971e,#ffd200); color: #1b0a00; border-color: transparent; }
-.product-card-brand--studyconnect { background: linear-gradient(120deg,#7f7fd5,#86a8e7,#91eae4); color: #04010b; border-color: transparent; }
+.product-card-brand--gcrm { background: linear-gradient(120deg,#7f7fd5,#86a8e7,#91eae4); color: #04010b; border-color: transparent; }
 .product-card-brand--gcrm { background: linear-gradient(120deg,#4aa3ff,#2ae6ff); color: #031021; border-color: transparent; }
 .product-card-brand--pcrwriter { background: linear-gradient(120deg,#ff8c68,#f9d423); color: #1b0900; border-color: transparent; }
 .product-card-brand--voicenotes { background: linear-gradient(120deg,#4158d0,#c850c0,#ffcc70); color: #08020c; border-color: transparent; }

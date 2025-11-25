@@ -30,7 +30,7 @@ const throttle = (func, limit) => {
 
 // ===== PRODUCT DATA =====
 const productData = {
-    studyConnect: [
+    gcrm: [
         {
             name: 'Guardian Clinical Research Management (GCRM)',
             suite: 'GCRM',
@@ -62,17 +62,17 @@ const productData = {
             cta: 'Request demo'
         },
         {
-            name: 'FlashLearnEMStm',
+            name: 'ChapterFlashEMT™',
             suite: 'ProMedixEMS™',
-            brandText: 'FlashLearnEMS',
-            brandVariant: 'flashlearn',
+            brandText: 'ChapterFlashEMT',
+            brandVariant: 'chapterflash',
             tagline: 'Spaced repetition system',
             description: 'A next-generation flashcard system built for EMS mastery with spaced repetition, smart distractors, custom decks, and deep integration with the ProMedixEMS curriculum.',
             highlights: ['Spaced repetition system', 'Custom decks & sync'],
             status: 'In Development · App Store + Google Play 2026',
             statusClass: 'phase',
             stack: 'React Native · Expo · SQLite',
-            link: 'mailto:tech@webconnect360.com?subject=FlashLearn%20Waitlist&body=Hello%20Shaun%2C%0A%0AAdd%20me%20to%20the%20FlashLearn%20waitlist.%0A%0AThank%20you!',
+            link: 'mailto:tech@webconnect360.com?subject=ChapterFlash%20Waitlist&body=Hello%20Shaun%2C%0A%0AAdd%20me%20to%20the%20ChapterFlash%20waitlist.%0A%0AThank%20you!',
             cta: 'Join waitlist'
         },
         {
@@ -1001,7 +1001,7 @@ class WebConnect360App {
         }
 
         try {
-            this.components.cardComponent.render('#studyconnect-grid', this.data.studyConnect);
+            this.components.cardComponent.render('#gcrm-grid', this.data.gcrm);
             this.components.cardComponent.render('#promedix-grid', this.data.proMedix);
         } catch (error) {
             console.error('Error rendering product grids:', error);

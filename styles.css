@@ -806,7 +806,7 @@ a {
     color: #05020c;
 }
 
-.platform-brand--flashlearn {
+.platform-brand--chapterflash {
     background: linear-gradient(120deg, #c471ed, #f64f59);
     color: #fff4fb;
 }
@@ -820,7 +820,6 @@ a {
     color: #1b0a00;
 }
 
-.platform-brand--studyconnect,
 .platform-brand--gcrm {
     background: linear-gradient(120deg, #7f7fd5, #86a8e7, #91eae4);
     color: #04010b;
@@ -889,7 +888,7 @@ a {
     background-clip: text;
 }
 
-.platform-brand--flashlearn {
+.platform-brand--chapterflash {
     background: linear-gradient(120deg, #4ecdc4, #1d6ff2);
     color: transparent;
     -webkit-text-fill-color: transparent;
@@ -907,14 +906,6 @@ a {
 
 .platform-brand--rhythm {
     background: linear-gradient(120deg, #ffd23f, #fb5607);
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-.platform-brand--studyconnect {
-    background: linear-gradient(120deg, #7c5dff, #4ecdc4);
     color: transparent;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -982,11 +973,11 @@ a {
     background: rgba(9, 9, 18, 0.95);
 }
 
-.studyconnect {
+.gcrm {
     background: rgba(255,255,255,0.02);
 }
 
-.studyconnect-grid {
+.gcrm-grid {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

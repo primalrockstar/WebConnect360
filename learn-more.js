@@ -1,10 +1,10 @@
 document.documentElement.classList.remove('no-js');
 document.documentElement.classList.add('js-ready');
 
-const flashlearnShots = [
+const chapterFlashShots = [
     {
         src: 'public/images/1000036904.png',
-        alt: 'FlashLearnEMS Choose Your Study Mode interface',
+        alt: 'ChapterFlashEMT Choose Your Study Mode interface',
         tag: 'STUDY PLANNER',
         title: 'Choose your study mode',
         caption: 'Select a study mode that matches your learning goals and available time. Each mode is optimized for different practice styles and retention windows.',
@@ -73,7 +73,7 @@ const flashlearnShots = [
     },
     {
         src: 'public/images/1000036918.png',
-        alt: 'FlashLearnEMS EMT-B chapter library interface',
+        alt: 'ChapterFlashEMT EMT-B chapter library interface',
         tag: 'EMT-B CONTENT',
         title: 'EMT-B study content',
     caption: 'Explore the full set of EMT-B study materials organized by chapter, complexity, and track so you can drop directly into the content you need.',
@@ -531,9 +531,9 @@ const flashlearnShots = [
     },
     {
         src: 'public/images/1000036914.png',
-        alt: 'FlashLearnEMS stats dashboard',
-        tag: 'FLASHLEARN SCALE',
-        title: 'FlashLearn by the numbers',
+        alt: 'ChapterFlashEMT stats dashboard',
+        tag: 'CHAPTERFLASH SCALE',
+        title: 'ChapterFlash by the numbers',
         caption: 'The EMT-B catalog presents every topic, card, and difficulty tier you need for true mastery.',
         stats: [
             { value: '760', label: 'Total cards available' },
@@ -544,13 +544,13 @@ const flashlearnShots = [
     }
 ];
 
-function renderFlashlearnGallery() {
-    const gallery = document.querySelector('#flashlearn-gallery');
+function renderChapterFlashGallery() {
+    const gallery = document.querySelector('#chapterflash-gallery');
     if (!gallery) return;
 
     gallery.innerHTML = '';
 
-    flashlearnShots.forEach((shot, index) => {
+    chapterFlashShots.forEach((shot, index) => {
         const card = document.createElement('article');
         card.className = 'glass-card reveal';
         card.style.setProperty('--card-index', index);
@@ -729,6 +729,6 @@ function initRevealObserver() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    renderFlashlearnGallery();
+    renderChapterFlashGallery();
     initRevealObserver();
 });
