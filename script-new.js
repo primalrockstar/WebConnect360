@@ -32,31 +32,17 @@ const throttle = (func, limit) => {
 const productData = {
     studyConnect: [
         {
-            name: 'StudyConnecttm',
-            suite: 'StudyConnecttm',
-            brandText: 'StudyConnect',
-            brandVariant: 'studyconnect',
-            tagline: 'Frictionless pre-screening platform',
-            description: 'Frictionless pre-screening across any clinical, research, or operational workflow. 60-second interest capture without PHI, automatically routing qualified participants or leads into secure pipelines.',
-            highlights: ['Smart scheduling', 'Roster & lead intelligence'],
+            name: 'Guardian Clinical Research Management (GCRM)',
+            suite: 'GCRM',
+            brandText: 'Guardian Clinical Research Management',
+            brandVariant: 'gcrm',
+            tagline: 'HIPAA-ready research management',
+            description: 'GCRM is a HIPAA-ready research management and study operations platform. WebConnect360 designs and demos GCRM alongside the ProMedixEMS suite.',
+            highlights: ['Eligibility & consent', 'Audit-ready runbooks', 'Coordinator dashboards'],
             status: 'Production ready · Live demos',
             statusClass: 'live',
-            stack: 'Netlify · Secure web app',
-            link: 'mailto:tech@webconnect360.com?subject=StudyConnect%20Request&body=Hello%20Shaun%2C%0A%0APlease%20send%20me%20the%20StudyConnect%20preview.%0A%0AThank%20you!',
-            cta: 'Request demo'
-        },
-        {
-            name: 'StudyConnectProtm',
-            suite: 'StudyConnectProtm',
-            brandText: 'StudyConnectPro',
-            brandVariant: 'studyconnectpro',
-            tagline: 'HIPAA backend for coordinators',
-            description: 'A HIPAA-compliant backend for research coordinators, clinics, and enterprise programs. Automates eligibility scoring, consent workflows, PHI handling, messaging, and audit logs across medical, dental, and general research operations.',
-            highlights: ['Workflow routing engine', 'Audit-ready infrastructure'],
-            status: 'Production ready · Live demos',
-            statusClass: 'live',
-            stack: 'React · FastAPI · AWS Shield',
-            link: 'mailto:tech@webconnect360.com?subject=StudyConnectPro%20Request&body=Hello%20Shaun%2C%0A%0APlease%20send%20me%20the%20StudyConnectPro%20demo.%0A%0AThank%20you!',
+            stack: 'React · FastAPI · AWS',
+            link: 'mailto:tech@webconnect360.com?subject=GCRM%20Request&body=Hello%20Shaun%2C%0A%0APlease%20send%20me%20the%20GCRM%20demo.%0A%0AThank%20you!',
             cta: 'Request demo'
         }
     ],

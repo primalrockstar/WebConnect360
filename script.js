@@ -24,13 +24,6 @@ const moodboardShots = [
         accent: '#ffd200'
     },
     {
-        tag: 'StudyConnect™',
-        category: 'Funnel telemetry',
-        title: 'Research funnels',
-        caption: 'Public pre-screen forms capture interest safely, validate answers inline, and pass only qualified leads to HIPAA-ready backends.',
-        accent: '#ff6b35'
-    },
-    {
         tag: 'VoiceNotesEMS™',
         category: 'Voice ops',
         title: 'Voice capture rails',
@@ -206,26 +199,17 @@ const platformData = [
         ctaLabel: 'Join waitlist'
     },
     {
-    name: 'StudyConnect™',
-        description: 'Standalone clinical and research pre-screening platform—separate from the ProMedixEMS suite—with 60-second interest capture that routes only qualified participants into HIPAA-ready pipelines.',
+        name: 'Guardian Clinical Research Management (GCRM)',
+        description: 'Guardian Clinical Research Management (GCRM) is a HIPAA-ready research management and study operations platform. WebConnect360 designs and demos GCRM alongside the ProMedixEMS suite.',
         status: 'PRODUCTION READY · LIVE DEMOS',
         statusClass: 'status-live',
-        tags: ['Smart scheduling', 'Roster & lead intelligence'],
-    brandText: 'StudyConnect™',
-        brandVariant: 'studyconnect',
+        tags: ['Workflow routing engine', 'Audit-ready infrastructure', 'Eligibility & consent'],
+        brandText: 'Guardian Clinical Research Management',
+        brandVariant: 'gcrm',
+        logo: 'public/images/GCRM.png',
+        logoAlt: 'GCRM logo',
         learn: '#',
-        demo: 'mailto:tech@webconnect360.com?subject=StudyConnecttm'
-    },
-    {
-    name: 'StudyConnectPro™',
-        description: 'Enterprise-grade HIPAA backend that operates independently from ProMedixEMS, covering eligibility scoring, consent workflows, PHI handling, messaging, and audit logs across clinical or research programs.',
-        status: 'PRODUCTION READY · LIVE DEMOS',
-        statusClass: 'status-live',
-        tags: ['Workflow routing engine', 'Audit-ready infrastructure'],
-    brandText: 'StudyConnectPro™',
-        brandVariant: 'studyconnectpro',
-        learn: '#',
-        demo: 'mailto:tech@webconnect360.com?subject=StudyConnectProtm'
+        demo: 'mailto:tech@webconnect360.com?subject=GCRM%20Request'
     }
 ];
 

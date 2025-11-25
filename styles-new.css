@@ -2570,7 +2570,7 @@ main {
 .product-card-brand--medicationsx { background: linear-gradient(120deg,#48c6ef,#6f86d6); border-color: transparent; }
 .product-card-brand--rhythm { background: linear-gradient(120deg,#f7971e,#ffd200); color: #1b0a00; border-color: transparent; }
 .product-card-brand--studyconnect { background: linear-gradient(120deg,#7f7fd5,#86a8e7,#91eae4); color: #04010b; border-color: transparent; }
-.product-card-brand--studyconnectpro { background: linear-gradient(120deg,#ff5f6d,#ffc371); color: #1b0a00; border-color: transparent; }
+.product-card-brand--gcrm { background: linear-gradient(120deg,#4aa3ff,#2ae6ff); color: #031021; border-color: transparent; }
 .product-card-brand--pcrwriter { background: linear-gradient(120deg,#ff8c68,#f9d423); color: #1b0900; border-color: transparent; }
 .product-card-brand--voicenotes { background: linear-gradient(120deg,#4158d0,#c850c0,#ffcc70); color: #08020c; border-color: transparent; }
 .product-card .status { padding: 0.2rem 0.75rem; border-radius: var(--radius-pill); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid rgba(255,255,255,0.3); }

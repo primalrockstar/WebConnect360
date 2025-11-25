@@ -821,7 +821,7 @@ a {
 }
 
 .platform-brand--studyconnect,
-.platform-brand--studyconnectpro {
+.platform-brand--gcrm {
     background: linear-gradient(120deg, #7f7fd5, #86a8e7, #91eae4);
     color: #04010b;
 }
@@ -838,6 +838,11 @@ a {
 
 .platform-brand--scenariolab {
     background: linear-gradient(120deg, #00c6ff, #0072ff);
+    color: #031021;
+}
+
+.platform-brand--gcrm {
+    background: linear-gradient(120deg, #0066cc, #00b3ff);
     color: #031021;
 }
 
@@ -916,8 +921,8 @@ a {
     background-clip: text;
 }
 
-.platform-brand--studyconnectpro {
-    background: linear-gradient(120deg, #ff5f6d, #ffc371);
+.platform-brand--gcrm {
+    background: linear-gradient(120deg, #4aa3ff, #2ae6ff);
     color: transparent;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -942,6 +947,14 @@ a {
 
 .platform-brand--scenariolab {
     background: linear-gradient(120deg, #4facfe, #00f2fe);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.platform-brand--gcrm {
+    background: linear-gradient(120deg, #4aa3ff, #2ae6ff);
     color: transparent;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
