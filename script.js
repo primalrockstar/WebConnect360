@@ -208,7 +208,7 @@ const platformData = [
         brandVariant: 'gcrm',
     logo: 'public/images/GCRM.jpg',
         logoAlt: 'GCRM logo',
-        learn: '#',
+        learn: 'gcrm-learn-more.html',
         demo: 'mailto:tech@webconnect360.com?subject=GCRM%20Request'
     }
 ];
