@@ -206,7 +206,7 @@ const platformData = [
         tags: ['Workflow routing engine', 'Audit-ready infrastructure', 'Eligibility & consent'],
         brandText: 'Guardian Clinical Research Management',
         brandVariant: 'gcrm',
-        logo: 'public/images/GCRM.png',
+    logo: 'public/images/GCRM.jpg',
         logoAlt: 'GCRM logo',
         learn: '#',
         demo: 'mailto:tech@webconnect360.com?subject=GCRM%20Request'
