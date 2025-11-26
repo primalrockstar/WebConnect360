@@ -769,8 +769,9 @@ a {
 
 .platform-card-header {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .platform-brand {
@@ -956,6 +957,9 @@ a {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    flex: 1;
+    min-width: 220px;
+    word-break: break-word;
 }
 
 .platform-card-media {

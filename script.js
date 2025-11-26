@@ -99,7 +99,7 @@ const platformData = [
         tags: ['Adaptive learning paths', 'Instructor & cohort dashboards'],
         brandText: 'ProMedixEMS',
         brandVariant: 'promedix',
-        learn: '#',
+    learn: 'gcrm-learn-more.html',
         demo: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%20Core'
     },
     {
