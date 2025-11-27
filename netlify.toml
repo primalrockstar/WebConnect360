@@ -107,12 +107,6 @@
   status = 200
   conditions = {Role = ["admin"]}
 
-# 404 page
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
-
 # Contact form submission (Netlify Forms)
 [[forms]]
   name = "contact"
