@@ -90,6 +90,21 @@ const productSpotlights = [
     }
 ];
 
+const gcrmPlatformCard = {
+    name: 'Guardian Clinical Research Management (GCRM)',
+    description: 'Guardian Clinical Research Management (GCRM) pairs eligibility automation, consent handling, and coordinator dashboards inside a HIPAA-ready control plane designed by WebConnect360.',
+    status: 'LIVE DEMOS · HIPAA READY',
+    statusClass: 'status-live',
+    tags: ['Eligibility automation', 'Consent vaults', 'Audit-ready workflows'],
+    brandText: 'Guardian Clinical Research Management',
+    brandVariant: 'gcrm',
+    logo: 'public/images/GCRM2.jpeg',
+    logoAlt: 'Guardian Clinical Research Management preview',
+    learn: 'gcrm-learn-more.html',
+    demo: 'mailto:tech@webconnect360.com?subject=GCRM%20Request',
+    ctaLabel: 'Request secure walkthrough'
+};
+
 const platformData = [
     {
         name: 'ProMedixEMS™ · EMT-B Core',
@@ -198,19 +213,7 @@ const platformData = [
         demo: 'mailto:tech@webconnect360.com?subject=ScenarioLabEMS',
         ctaLabel: 'Join waitlist'
     },
-    {
-        name: 'Guardian Clinical Research Management (GCRM)',
-        description: 'Guardian Clinical Research Management (GCRM) is a HIPAA-ready research management and study operations platform. WebConnect360 designs and demos GCRM alongside the ProMedixEMS suite.',
-        status: 'PRODUCTION READY · LIVE DEMOS',
-        statusClass: 'status-live',
-        tags: ['Workflow routing engine', 'Audit-ready infrastructure', 'Eligibility & consent'],
-        brandText: 'Guardian Clinical Research Management',
-        brandVariant: 'gcrm',
-    logo: 'public/images/GCRM.jpg',
-        logoAlt: 'GCRM logo',
-        learn: 'gcrm-learn-more.html',
-        demo: 'mailto:tech@webconnect360.com?subject=GCRM%20Request'
-    }
+    gcrmPlatformCard
 ];
 
 function createTagElements(tags = []) {

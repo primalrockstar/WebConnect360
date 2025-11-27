@@ -2,14 +2,11 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  # Build command (not needed for static site, but kept for future enhancements)
-  command = "echo 'Building WebConnect360...'"
+  # Generates a clean static bundle inside dist/
+  command = "bash ./scripts/build-static.sh"
   
-  # Publish directory
-  publish = "."
-  
-  # Functions directory (for future serverless functions)
-  functions = "netlify/functions"
+  # Publish the generated bundle
+  publish = "dist"
 
 # Headers for security and performance
 [[headers]]
@@ -124,13 +121,13 @@
   
 # Branch deploy settings
 [context.production]
-  command = "echo 'Production build'"
+  command = "bash ./scripts/build-static.sh"
   
 [context.deploy-preview]
-  command = "echo 'Deploy preview build'"
+  command = "bash ./scripts/build-static.sh"
   
 [context.branch-deploy]
-  command = "echo 'Branch deploy build'"
+  command = "bash ./scripts/build-static.sh"
 
 # Performance optimizations
 [build.processing]
