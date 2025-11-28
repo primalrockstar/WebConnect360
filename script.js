@@ -93,12 +93,9 @@ const platformLineup = [
     status: 'BETA · DUAL-STORE', statusClass: 'status-in-development', tags: ['Spacing AI','Beta'], brandText: 'ChapterFlashEMT™', brandVariant: 'chapterflash', learn: 'learn-more.html', demo: 'mailto:tech@webconnect360.com?subject=ChapterFlash%20Beta', ctaLabel: 'Join beta'
   },
   {
-    name: 'MedicationsX™',
-    description: 'Pharmacology companion with contraindication intelligence and offline formularies — preparing mobile release.', status: 'INTEGRATION TESTING · MOBILE', statusClass: 'status-in-development', tags: ['Contraindication engine'], brandText: 'MedicationsX™', brandVariant: 'medicationsx', learn: '#contact', demo: 'mailto:tech@webconnect360.com?subject=MedicationsX%20Preview', ctaLabel: 'Request preview'
-  },
-  {
-    name: 'RhythmLabEMS™',
-    description: 'Adaptive rhythm trainer with annotation tools and mastery tracks — alpha mobile builds ready for testers.', status: 'ALPHA · MOBILE', statusClass: 'status-prototype', tags: ['Adaptive drills'], brandText: 'RhythmLabEMS™', brandVariant: 'rhythm', learn: '#contact', demo: 'mailto:tech@webconnect360.com?subject=RhythmLabEMS%20Preview', ctaLabel: 'Join alpha'
+    name: 'ProMedixEMS™ · PCR Trainer',
+    description: 'High-fidelity patient care reporting simulation. Master NEMSIS-compliant documentation workflows before clinical rotations.',
+    status: 'IN DEVELOPMENT', statusClass: 'status-prototype', tags: ['NEMSIS-ready', 'Documentation'], brandText: 'ProMedixEMS', brandVariant: 'promedix', learn: '#contact', demo: 'mailto:tech@webconnect360.com?subject=PCR%20Trainer%20Preview', ctaLabel: 'Request preview'
   },
   {
     name: 'Guardian Clinical Research Management (GCRM)',
@@ -111,7 +108,6 @@ platformLineup.forEach(registerPlatformCard);
 
 const productSpotlights = [
   { id: 'chapterflash', brand: 'ChapterFlashEMT™', suite: 'ProMedixEMS™', tagline: 'Spaced repetition OS for EMT cohorts.', description: 'Spacing AI personalizes deck order and syncs progress across crews.', highlights: ['Spacing AI','Mobile stacks'], status: 'Beta', accent: '#f64f59', ctaLabel: 'Learn more', ctaHref: 'learn-more.html' },
-  { id: 'medicationsx', brand: 'MedicationsX™', suite: 'ProMedixEMS™', tagline: 'Pharmacology companion', description: 'Contraindication intelligence and offline formularies.', highlights: ['Contraindication engine'], status: 'Integration', accent: '#48c6ef', ctaLabel: 'Join waitlist', ctaHref: 'mailto:tech@webconnect360.com?subject=MedicationsX%20Waitlist' },
   { id: 'promedix-emtb', brand: 'ProMedixEMS™ · EMT-B Core', suite: 'ProMedixEMS™', tagline: 'Crew readiness dashboard', description: 'Readiness streaks, remediation queues, and instructor workflows.', highlights: ['Readiness dashboards'], status: 'Packaging', accent: '#4ecdc4', ctaLabel: 'Request demo', ctaHref: 'mailto:tech@webconnect360.com?subject=ProMedixEMS%20EMT-B%20Request' }
 ];
 
