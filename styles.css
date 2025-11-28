@@ -644,110 +644,25 @@ a {
     pointer-events: none;
 }
 
-.moodboard {
-    background: radial-gradient(circle at 20% 20%, rgba(78,205,196,0.12), transparent 45%),
-        radial-gradient(circle at 80% 0%, rgba(255,107,53,0.12), transparent 40%),
-        linear-gradient(180deg, rgba(4,10,26,0.95), rgba(2,4,12,0.98));
-    position: relative;
-    overflow: hidden;
-}
-
-.moodboard::before,
-.moodboard::after {
-    content: '';
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
-    filter: blur(20px);
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.moodboard::before { top: -120px; left: -60px; }
-.moodboard::after { bottom: -160px; right: -80px; }
-
-.moodboard .shell { position: relative; z-index: 1; }
-
-.moodboard-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-
-.mood-card {
-    --mood-accent: var(--accent-2);
-    border-radius: var(--radius-lg);
-    border: 1px solid color-mix(in srgb, var(--mood-accent) 35%, rgba(255,255,255,0.12));
-    background: rgba(4,9,18,0.85);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
-    overflow: hidden;
-    position: relative;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.mood-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
-    border-radius: inherit;
-    pointer-events: none;
-}
-
-
-.mood-card-body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.45rem;
-}
-
-.mood-card-body h3 {
-    margin: 0;
-    font-size: 1.15rem;
-}
-
-.mood-card-body p {
-    margin: 0;
-    color: var(--muted);
-}
-
-.mood-category {
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: none;
-    color: rgba(255,255,255,0.6);
-}
-
-.mood-tag {
-    align-self: flex-start;
-    padding: 0.25rem 0.85rem;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.2);
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: none;
-    color: rgba(255,255,255,0.85);
-    background: rgba(255,255,255,0.05);
-}
-
-.mood-card-sparkline {
-    display: block;
-    height: 2px;
-    width: 100%;
-    background: linear-gradient(120deg, rgba(255,255,255,0.1), var(--mood-accent, var(--accent-2)));
-    border-radius: 999px;
-    opacity: 0.8;
-}
-
-.moodboard-note {
-    margin-top: 1.5rem;
+.empty-state-card {
+    border: 1px dashed rgba(255,255,255,0.3);
+    border-radius: var(--radius);
+    padding: 2rem;
+    background: rgba(5,5,15,0.6);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.empty-state-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.empty-state-card p {
+    margin: 0;
     color: var(--muted);
     font-size: 0.95rem;
 }
