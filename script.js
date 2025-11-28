@@ -1,20 +1,6 @@
 document.documentElement.classList.remove('no-js');
 document.documentElement.classList.add('js-ready');
 
-// Card registry allows us to remove all existing cards and add them back one at a time.
-// Use registerPlatformCard/registerSpotlightCard to push new configs.
-const cardRegistry = {
-    platforms: [],
-    spotlights: []
-};
-
-function registerPlatformCard(config) {
-    cardRegistry.platforms.push(config);
-    return config;
-}
-document.documentElement.classList.remove('no-js');
-document.documentElement.classList.add('js-ready');
-
 // Registry-driven card system: add back cards one-by-one with registerPlatformCard/registerSpotlightCard.
 const cardRegistry = { platforms: [], spotlights: [] };
 
