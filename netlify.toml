@@ -68,7 +68,6 @@
   for = "*.html"
   [headers.values]
     Cache-Control = "public, max-age=3600"
-    Content-Encoding = "gzip"
 
 # Enable HTTPS redirect
 [[redirects]]
