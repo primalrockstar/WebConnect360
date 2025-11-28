@@ -727,14 +727,7 @@ a {
     color: #fff4fb;
 }
 
-.platform-brand--medicationsx {
-    background: linear-gradient(120deg, #48c6ef, #6f86d6);
-}
 
-.platform-brand--rhythm {
-    background: linear-gradient(120deg, #f7971e, #ffd200);
-    color: #1b0a00;
-}
 
 .platform-brand--gcrm {
     background: linear-gradient(120deg, #7f7fd5, #86a8e7, #91eae4);
@@ -812,21 +805,7 @@ a {
     background-clip: text;
 }
 
-.platform-brand--medicationsx {
-    background: linear-gradient(120deg, #c471ed, #f64f59);
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
 
-.platform-brand--rhythm {
-    background: linear-gradient(120deg, #ffd23f, #fb5607);
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
 
 .platform-brand--gcrm {
     background: linear-gradient(120deg, #4aa3ff, #2ae6ff);
